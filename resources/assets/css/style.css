@@ -1,0 +1,987 @@
+/*common css start*/
+* {
+  padding: 0;
+  margin: 0;
+}
+
+button,
+a {
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family: 'Hind Siliguri', sans-serif;
+}
+
+.section-title-outer {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.section-title-outer .title {
+    font-size: 32px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.section-title-outer .title .separate-color{
+  color: orange;
+}
+
+.banner-section:after {
+    content: "";
+    position: absolute;
+    background: #002147;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+.banner-section {
+    padding: 100px 0px;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-section .banner-title {
+    display: flex;
+    font-size: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 0!important;
+    text-align: center;
+    justify-content: center;
+}
+
+.banner-section .banner-item {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    margin: 0;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.banner-section .banner-item li {
+    display: inline-block;
+    margin-right: 14px;
+}
+
+.banner-section .banner-item li a {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.banner-section .banner-item li a i {
+    color: #ff5733;
+    margin-right: 5px;
+}
+
+.banner-section .banner-item:after {
+    content: "";
+    background: #000000;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.banner-section .banner-item li.active:before {
+    content: "\f111";
+    font-size: 10px;
+    font-weight: 500;
+    color: #ff5733;
+    font-family: "Font Awesome 5 Free";
+    padding-right: 4px;
+    position: relative;
+    top: -1px;
+}
+
+/*common css End*/
+
+/*Header css start*/
+.header-section {
+  background: #fff;
+  border-bottom: 1px solid #F1F1F1;
+  -webkit-box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+  -moz-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 9px rgb(0 0 0 / 5%);
+}
+.header-section .navbar-brand {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+.header-section .navbar-brand .brand {
+    height: 100%;
+}
+.nav-items-wrapper {
+    padding: 0% 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    background: #ffffff;
+    position: relative;
+}
+.nav-items-wrapper .nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  height: 100%;
+  padding-left: 0;
+}
+.nav-list .nav-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-item:hover .nav-item-link {
+  color: #FF5733;
+}
+.nav-item-link {
+  position: relative;
+  font-size: 16px;
+  color: #222;
+  font-weight: 600;
+  padding: 10px 17px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-transform: capitalize;
+}
+
+.nav-item-link i {
+    margin-right: 6px;
+    font-size: 16px;
+    color: #ff5733;
+}
+
+.nav-item:hover .nav-item-link.get-service {
+    color: #fff;
+}
+
+/*.nav-item-link.active {
+  color: #FF5733;
+}*/
+
+.nav-item-link.login-logout {
+    padding-right: 15px;
+    background: #0ca7f1;
+    border-radius: 5px;
+    transition: all .3s ease;
+    height: auto;
+    color: #fff;
+    margin-left: 20px;
+    animation: shake 0.9s;
+    animation-iteration-count: infinite;
+}
+
+.nav-item:hover .nav-item-link.login-logout {
+    background: orange;
+    color: #fff;
+}
+
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+    /*small btn css*/
+.nav-toggle-btn .btn-inner {
+    width: 26px;
+    border-bottom: 1px solid #000000;
+    position: relative;
+    transition: all .4s ease;
+}
+.nav-toggle-btn {
+    height: 30px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #000000;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 999;
+}
+.nav-toggle-btn .btn-inner:before {
+    content: "";
+    height: 1px;
+    width: 26px;
+    position: absolute;
+    background: #000000;
+    top: -7px;
+}
+.nav-toggle-btn .btn-inner:after {
+    content: "";
+    height: 1px;
+    width: 26px;
+    position: absolute;
+    background: #000000;
+    top: 7px;
+}
+
+    /*fixed header*/
+.fixed-header .nav-items-wrapper {
+    position: fixed;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    animation: smoothScroll 1s forwards;
+}
+@keyframes smoothScroll {
+    0% {
+        transform: translateY(-40px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+/*Header css End*/
+
+/* Home section css start */
+.home-section {
+    padding: 100px 0;
+    background: #0c2a45;
+}
+
+.home-sec-left-side-wrap .title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 65px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.home-sec-left-side-wrap .sub-title {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #fff;
+}
+
+.home-sec-left-link-outer a {
+    padding: 20px 44px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 700;
+    margin-top: 30px;
+    display: inline-block;
+    transition: all .3s ease;
+}
+
+.home-sec-left-link-outer a:hover {
+    background: orange;
+    border-color: orange;
+}
+
+.home-sec-left-link-outer .course-link {
+    background: #23bdee;
+    margin-right: 20px;
+}
+
+.home-sec-left-link-outer .login-link {
+    border: 1px solid #fff;
+}
+
+/* Home section css End */
+
+/*About section css start*/
+.about-us-section {
+    padding: 50px 0;
+    background: #f2f5f9;
+}
+
+.about-item-wrap {
+    background: #fff;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: rgb(233 231 231 / 48%) 0px 3px 8px;
+    transition: all .3s ease;
+}
+
+.about-item-wrap:hover {
+    transform: translateY(-5px);
+    box-shadow: rgb(255 165 0 / 38%) 0px 2px 4px;
+}
+
+.about-item-wrap img {
+    display: inline-block;
+    border: 1px solid #f2f5f9;
+    border-radius: 5px;
+    padding: 9px;
+    width: 60px;
+}
+
+.about-item-wrap .title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #0c2a45;
+    margin-top: 20px;
+}
+
+.about-item-wrap .text {
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #56626d;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/*About section css End*/
+
+/*Course section css start*/
+.course-section {
+    padding: 50px 0;
+}
+
+.course-item-wrap {
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    transition: all .3s ease;
+}
+
+.course-item-content {
+    padding: 15px 20px;
+}
+
+.course-item-content .course-price {
+    margin-bottom: 10px;
+}
+
+.course-item-content .course-title {
+    color: #3F3A64;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: block;
+    transition: all .3s ease;
+}
+
+.course-item-content .course-meta {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.course-item-content .course-meta .meta-item {
+    font-size: 14px;
+    color: #696969;
+    font-weight: 500;
+}
+
+.course-item-content .course-price .origin-price {
+    font-size: 24px;
+    font-weight: 600;
+    margin-right: 12px;
+    color: #8C89A2;
+}
+
+.course-item-content .course-price .discount-price {
+    color: #20AD96;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.course-item-content .course-meta .meta-item.course-lesson {
+    margin-right: 20px;
+}
+
+.course-item-content .course-meta .meta-item i {
+    margin-right: 4px;
+}
+
+.course-item-wrap:hover .course-title {
+    color: #20AD96;
+}
+
+.course-item-wrap:hover .course-item-image-outer img {
+    webkit-transform: scale3d(1.1, 1.1, 1.1);
+    transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.course-item-image-outer img {
+    width: 100%;
+    -webkit-transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+    transition: all 1.5s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.course-item-image-outer {
+    display: block;
+    overflow: hidden;
+}
+
+.course-item-wrap:hover {
+    box-shadow: 0 14px 59px rgb(0 0 0 / 12%);
+}
+/*Course section css End*/
+
+/*Achievment section css start*/
+.our-achievment-section {
+    padding: 40px 0;
+}
+
+.achiement-item-wrap {
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.achiement-item-wrap .count-number {
+    font-weight: 600;
+    font-size: 35px;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.achiement-item-wrap .name {font-weight: 500;font-size: 18px;color: #0c2a45;margin: 0;}
+/*Achievment section css end*/
+
+/*Footer section css start*/
+.footer-section {
+    padding: 50px 0;
+    background: #252641;
+}
+
+.footer-item-outer .title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-item-outer .footer-list {
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.footer-list-item-link {
+    display: block;
+    color: #b2b3cf;
+    font-size: 16px;
+    font-weight: 400;
+    transition: all .3s ease-in-out;
+    padding-bottom: 10px;
+}
+
+.footer-social-links {
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.footer-list-item-link i {
+    margin-right: 6px;
+    color: #23bdee;
+}
+
+.footer-list-item-link:hover {
+    color: orange;
+}
+
+.footer-social-link-item a {
+    background: #000;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 100%;
+    color: #fff;
+    display: block;
+}
+
+.footer-social-link-item {
+    margin-right: 8px;
+}
+
+.footer-social-link-item:hover a {
+    transform: rotate(360deg);
+}
+
+.footer-social-link-item:nth-child(1) a {
+    background: #3b5998;
+}
+
+.footer-social-link-item:nth-child(2) a {
+    background: #26a6d1;
+}
+
+.footer-social-link-item:nth-child(3) a {
+    background: #cd2371;
+}
+
+.footer-social-link-item:nth-child(4) a {
+    background: #d90110;
+}
+
+.subcribe-form.form-group {
+    position: relative;
+}
+
+.subcribe-form input {
+    height: 60px;
+}
+
+.subcribe-form .subcriber-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    font-weight: 600;
+    font-size: 22px;
+    color: #fff;
+    background: #0ca7f1;
+    border-radius: 5px;
+    border: none;
+    padding: 0 30px;
+    border-radius: 0px 5px 5px 0;
+}
+
+.footer-bottom-outer {
+    border-top: 1px solid #dbe2e9;
+    border-bottom: 1px solid #dbe2e9;
+    padding: 20px 0 18px;
+    margin-top: 30px;
+}
+
+.footer-bottom-outer .copyright-text {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-bottom-outer .copyright-text a {
+    color: #ffa500;
+}
+/*Footer section css End*/
+
+/*Course details page css start*/
+.course-details-section {
+    padding: 40px 0;
+}
+
+.course-details-video video {
+    width: 100%;
+}
+
+.course-details-video {
+    margin-bottom: 20px;
+}
+
+.course-details-outer {
+    margin-bottom: 30px;
+}
+
+.course-details-outer .title {
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.course-details-outer .description {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+
+.course-review-outer {
+    margin-bottom: 30px;
+}
+
+.course-review-outer .title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 3px;
+}
+
+.course-review-item {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.course-review-item .user-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.course-review-item.reply {
+    padding-left: 50px;
+}
+
+.course-review-content .author-name,
+.course-review-reply-content .author-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 3px;
+}
+
+.course-review-content .author-name .review-date,
+.course-review-reply-content .author-name .review-date {
+    font-size: 16px;
+    font-weight: 300;
+    color: #111;
+}
+
+.course-review-content .review-message,
+.course-review-reply-content .review-message {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.course-review-item button {
+    border: none;
+}
+
+.review-form.form-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.review-form.form-group button {
+    margin-top: 10px;
+    background: #ff5733;
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.course-details-sidebar-wrapper {
+    background: #fff;
+    border: 1px solid #dbe2e9;
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 15px;
+    transition: all .3s ease;
+}
+
+.course-price-outer .price {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 25px;
+    color: #ff5733;
+}
+
+.course-price-outer {
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.course-instructor-outer {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.course-instructor-image img {
+    width: 80px;
+    height: 80px;
+}
+
+.course-instructor-image {
+    margin-right: 10px;
+}
+
+.course-instructor-name .instructor-name {
+    cursor: pointer;
+    color: #062015;
+    transition: all .3s ease-in-out;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.course-instructor-name .instructor-des {
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #56626d;
+}
+
+.course-details-sidebar-wrapper ul {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+.course-details-sidebar-wrapper ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    border-top: 1px solid #ced4da;
+}
+
+.course-details-btn-inner {
+    display: block;
+    margin-top: 15px;
+    background: #ff5733;
+    padding: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+.course-details-sidebar-wrapper:hover .course-details-btn-inner {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.course-details-sidebar-wrapper:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.course-details-sidebar-wrapper:hover .course-instructor-name .instructor-name {
+    color: #ff5733;
+}
+/*Course details page css End*/
+
+/*Login page css start*/
+.login-section {
+    padding: 60px 0;
+}
+
+.login-form-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-form-wrapper .login-form {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: -3px -3px 7px #ffffff73, 0px 2px 20px rgb(94 104 121 / 34%);
+}
+
+.registration-form.form-group {
+    width: 100%;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 40px 30px;
+    box-shadow: -3px -3px 7px #ffffff73, 0px 2px 20px rgb(94 104 121 / 34%);
+}
+
+.login-form .title,
+.registration-form.form-group .title {
+    font-size: 33px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #000;
+    text-align: center;
+    font-style: italic;
+}
+
+.input-field-wrapper {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-field-wrapper span {
+    position: absolute;
+    line-height: 50px;
+    color: #595959;
+    left: 15px;
+}
+
+.input-field-wrapper input {
+    height: 100%;
+    width: 100%;
+    padding-left: 39px;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    color: #595959;
+    background: #fff;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #ffffff73;
+    line-height: 40px;
+}
+
+.input-field-wrapper i {
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    font-weight: 700;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.reset-password-link {
+    color: #ff5733;
+    text-decoration: underline;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: capitalize;
+    display: inline-block;
+}
+
+.submit-btn-outer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.submit-btn-outer .submit-btn-inner {
+    border: 1px solid #f16522;
+    -moz-transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    background: #ff5733;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+}
+
+.sign-up-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #d90110;
+    text-decoration: underline;
+}
+/*Login page css end*/
+
+/*All course page css start*/
+.all-course-button-title {
+    font-size: 25px;
+    font-weight: 700;
+    display: inline-block;
+    text-transform: capitalize;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+}
+
+div#v-pills-tab {
+    width: 350px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+div#v-pills-tab .nav-link {
+    display: inherit;
+    margin-bottom: 10px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+div#v-pills-tab .nav-link.active {
+    background: #ff5733;
+    color: #fff;
+}
+/*All course page css End*/
