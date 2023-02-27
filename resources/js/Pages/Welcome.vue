@@ -1,16 +1,5 @@
-<script setup>
-import { Head, Link } from '@inertiajs/vue3';
-
-defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
-});
-</script>
-
 <template>
-    <Head title="Welcome" />
+<!--    <Head title="Welcome" />-->
     <!-- /Header -->
     <main>
         <!-- Home -->
@@ -513,9 +502,19 @@ defineProps({
     </main>
 
     <!-- Footer -->
-
+    <Footer />
     <!-- /Footer -->
 </template>
+
+<script>
+    import Layout from '../Shared/Layout.vue';
+    import Footer from '../Shared/Footer.vue';
+    export default {
+        layout: Layout,
+        components:{ Footer }
+
+    }
+</script>
 
 <style>
 

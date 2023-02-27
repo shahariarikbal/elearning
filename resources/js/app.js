@@ -30,6 +30,16 @@ createInertiaApp({
             .mount(el);
     },
     progress: {
-        color: '#4B5563',
+        // during navigation, in milliseconds.
+        delay: 250,
+
+        // The color of the progress bar.
+        color: 'red',
+
+        // Whether to include the default NProgress styles.
+        includeCSS: true,
+
+        // Whether the NProgress spinner will be shown.
+        showSpinner: true,
     },
 });

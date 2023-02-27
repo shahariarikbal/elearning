@@ -10,6 +10,7 @@ class AuthenticateController extends Controller
 {
     public function userLoginFormShow()
     {
+        sleep(2);
         return Inertia::render('User/Login');
     }
 }
