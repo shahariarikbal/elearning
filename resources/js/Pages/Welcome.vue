@@ -15,8 +15,8 @@
                                 TBS একাডেমি আপনাকে সঠিক কাজের দক্ষতা অর্জন করতে ও সফল ক্যারিয়ার গঠনে সহয়তা করে - সেটা এখন এবং ভবিষ্যতে।
                             </p>
                             <div class="home-sec-left-link-outer">
-                                <a href="#" class="course-link">কোর্সগুলো দেখুন</a>
-                                <a href="#" class="login-link">লগ ইন / সাইন আপ</a>
+                                <NavLink href="/courses" class="course-link">কোর্সগুলো দেখুন</NavLink>
+                                <NavLink href="/user/login" class="login-link">লগ ইন / সাইন আপ</NavLink>
                             </div>
                         </div>
                     </div>
@@ -509,9 +509,10 @@
 <script>
     import Layout from '../Shared/Layout.vue';
     import Footer from '../Shared/Footer.vue';
+    import NavLink from '../Shared/NavLink.vue';
     export default {
         layout: Layout,
-        components:{ Footer }
+        components:{ Footer, NavLink }
 
     }
 </script>

@@ -34,16 +34,16 @@
                                     আমাদের কোর্স তালিকা
                                 </h2>
                                 <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
-                                    Home
+                                    UI & UX
                                 </button>
                                 <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                                    Profile
+                                    Web Development
                                 </button>
                                 <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                                    Messages
+                                    Digital Marketing
                                 </button>
                                 <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                                    Settings
+                                    CMS
                                 </button>
                             </div>
                             <div class="tab-content" id="v-pills-tabContent">
@@ -145,7 +145,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course1.jpg">
+                                                            <img :src="'frontend/images/course/course1.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -169,7 +169,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course2.jpg">
+                                                            <img :src="'frontend/images/course/course2.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -192,7 +192,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course3.jpg">
+                                                            <img :src="'frontend/images/course/course3.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -230,7 +230,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course1.jpg">
+                                                            <img :src="'frontend/images/course/course1.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -254,7 +254,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course2.jpg">
+                                                            <img :src="'frontend/images/course/course2.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -277,7 +277,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course3.jpg">
+                                                            <img :src="'frontend/images/course/course3.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -315,7 +315,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <a href="course-details.html" class="course-item-image-outer">
-                                                            <img src="assets/images/course/course1.jpg">
+                                                            <img :src="'frontend/images/course/course1.jpg'">
                                                         </a>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -339,7 +339,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <div class="course-item-image-outer">
-                                                            <img src="assets/images/course/course2.jpg">
+                                                            <img :src="'frontend/images/course/course2.jpg'">
                                                         </div>
                                                         <div class="course-item-content">
                                                             <div class="course-price">
@@ -362,7 +362,7 @@
                                                 <div class="col-md-4">
                                                     <div class="course-item-wrap">
                                                         <div class="course-item-image-outer">
-                                                            <img src="assets/images/course/course3.jpg">
+                                                            <img :src="'frontend/images/course/course3.jpg'">
                                                         </div>
                                                         <div class="course-item-content">
                                                             <div class="course-price">

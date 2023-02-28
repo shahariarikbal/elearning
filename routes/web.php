@@ -16,6 +16,15 @@ use Inertia\Inertia;
 |
 */
 
+Route::get('clear', function () {
+    \Artisan::call('cache:clear');
+    \Artisan::call('config:clear');
+    \Artisan::call('route:clear');
+    \Artisan::call('view:clear');
+    \Artisan::call('optimize');
+    dd("All clear!");
+});
+
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class, 'courses']);
 
