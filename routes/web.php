@@ -30,5 +30,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/user/login', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userLoginFormShow']);
+Route::get('/user/register', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userRegisterFormShow']);
 
 require __DIR__.'/auth.php';

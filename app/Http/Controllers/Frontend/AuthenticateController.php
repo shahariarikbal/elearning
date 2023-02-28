@@ -13,4 +13,10 @@ class AuthenticateController extends Controller
         sleep(2);
         return Inertia::render('User/Login');
     }
+
+    public function userRegisterFormShow()
+    {
+        sleep(2);
+        return Inertia::render('User/Register');
+    }
 }

@@ -45,7 +45,7 @@
                                     Sign in
                                 </button>
                             </div>
-                            <a href="registration.html" class="sign-up-link">Sign Up</a>
+                            <NavLink href="/user/register" class="sign-up-link">Sign Up</NavLink>
                         </form>
                     </div>
                 </div>
