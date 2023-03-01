@@ -11,6 +11,11 @@ import '../assets/plugins/owl-carousel/owl.carousel.min';
 // import '../assets/js/wow.min';
 import '../assets/js/main';
 
+//Backend assets
+import '../backend/vendors/mdi/css/materialdesignicons.min.css';
+import '../backend/vendors/css/vendor.bundle.base.css';
+import '../backend/css/style.css';
+
 
 
 import { createApp, h } from 'vue';
