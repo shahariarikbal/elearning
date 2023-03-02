@@ -15,6 +15,14 @@ import '../assets/js/main';
 import '../backend/vendors/mdi/css/materialdesignicons.min.css';
 import '../backend/vendors/css/vendor.bundle.base.css';
 import '../backend/css/style.css';
+import '../backend/vendors/js/vendor.bundle.base.js';
+import '../backend/vendors/chart.js/Chart.min.js';
+import '../backend/js/jquery.cookie.js';
+import '../backend/js/off-canvas.js';
+import '../backend/js/hoverable-collapse.js';
+import '../backend/js/misc.js';
+import '../backend/js/dashboard.js';
+import '../backend/js/todolist.js';
 
 
 

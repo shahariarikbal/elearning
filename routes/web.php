@@ -40,5 +40,7 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/user/login', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userLoginFormShow']);
 Route::get('/user/register', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userRegisterFormShow']);
+Route::get('/courses', [\App\Http\Controllers\Admin\CourseController::class, 'courses']);
+Route::get('/services', [\App\Http\Controllers\Admin\ServiceController::class, 'services']);
 
 require __DIR__.'/auth.php';
