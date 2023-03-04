@@ -5,7 +5,7 @@
                 <li class="nav-item nav-profile">
                     <a href="#" class="nav-link">
                         <div class="nav-profile-image">
-                            <img :src="'Backend/assets/images/faces/face1.jpg'" alt="profile">
+                            <img :src="'/Backend/assets/images/faces/face1.jpg'" alt="profile">
                             <span class="login-status online"></span>
                             <!--change to offline or busy as needed-->
                         </div>
@@ -23,13 +23,13 @@
                     </NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" :href="'services'">
+                    <NavLink class="nav-link" :href="route('services')">
                         <span class="menu-title">Services</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" :href="'courses'">
+                    <NavLink class="nav-link" :href="route('course-list')">
                         <span class="menu-title">Courses</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </NavLink>

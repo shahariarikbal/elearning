@@ -8,9 +8,8 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Striped Table</h4>
-                            <p class="card-description"> Add class <code>.table-striped</code>
-                            </p>
+                            <h4 class="card-title">Service List</h4>
+                            <NavLink :href="'add/service'" class="btn btn-sm btn-primary float-end"> Add Service</NavLink>
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
@@ -127,6 +126,7 @@
 import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 import Sidebar from '../../Shared/Backend/Sidebar.vue';
+import NavLink from '@/Components/NavLink.vue';
 </script>
 
 <style scoped>

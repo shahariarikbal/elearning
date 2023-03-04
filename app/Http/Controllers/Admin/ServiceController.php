@@ -12,4 +12,9 @@ class ServiceController extends Controller
     {
         return Inertia::render('Backend/Service');
     }
+
+    public function addService()
+    {
+        return Inertia::render('Backend/ServiceAdd');
+    }
 }
