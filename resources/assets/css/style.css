@@ -8,7 +8,7 @@ button,
 a {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 ul li {
@@ -215,7 +215,7 @@ body {
     height: auto;
     color: #fff;
     margin-left: 20px;
-    animation: shake 0.9s;
+    animation: shake 2.9s;
     animation-iteration-count: infinite;
 }
 

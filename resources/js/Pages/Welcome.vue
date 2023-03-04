@@ -30,6 +30,60 @@
         </section>
         <!-- /Home -->
 
+        <!-- Achievement -->
+        <section class="our-achievment-section">
+            <div class="container">
+                <div class="section-title-outer">
+                    <h2 class="title">
+                        আমাদের <span class="separate-color">অর্জন</span> সমূহ
+                    </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="achiement-item-wrap">
+                            <h4 class="count-number">
+                                10000 <span>+</span>
+                            </h4>
+                            <h6 class="name">
+                                নিবন্ধিত শিক্ষার্থী
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="achiement-item-wrap">
+                            <h4 class="count-number">
+                                10
+                            </h4>
+                            <h6 class="name">
+                                ট্রেইনার
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="achiement-item-wrap">
+                            <h4 class="count-number">
+                                15
+                            </h4>
+                            <h6 class="name">
+                                মোট কোর্স
+                            </h6>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="achiement-item-wrap">
+                            <h4 class="count-number">
+                                10000 <span>%</span>
+                            </h4>
+                            <h6 class="name">
+                                সফল শিক্ষার্থী
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /Achievement -->
+
         <!-- About Us -->
         <section class="about-us-section">
             <div class="container">
@@ -445,60 +499,6 @@
             </div>
         </section>
         <!-- /Course -->
-
-        <!-- Achievement -->
-        <section class="our-achievment-section">
-            <div class="container">
-                <div class="section-title-outer">
-                    <h2 class="title">
-                        আমাদের <span class="separate-color">অর্জন</span> সমূহ
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <div class="achiement-item-wrap">
-                            <h4 class="count-number">
-                                10000 <span>+</span>
-                            </h4>
-                            <h6 class="name">
-                                নিবন্ধিত শিক্ষার্থী
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="achiement-item-wrap">
-                            <h4 class="count-number">
-                                10
-                            </h4>
-                            <h6 class="name">
-                                ট্রেইনার
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="achiement-item-wrap">
-                            <h4 class="count-number">
-                                15
-                            </h4>
-                            <h6 class="name">
-                                মোট কোর্স
-                            </h6>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="achiement-item-wrap">
-                            <h4 class="count-number">
-                                10000 <span>%</span>
-                            </h4>
-                            <h6 class="name">
-                                সফল শিক্ষার্থী
-                            </h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- /Achievement -->
     </main>
 
     <!-- Footer -->
