@@ -43,5 +43,7 @@ Route::get('/user/register', [\App\Http\Controllers\Frontend\AuthenticateControl
 Route::get('/course/list', [\App\Http\Controllers\Admin\CourseController::class, 'courses'])->name('course-list');
 Route::get('/services', [\App\Http\Controllers\Admin\ServiceController::class, 'services'])->name('services');
 Route::get('/add/service', [\App\Http\Controllers\Admin\ServiceController::class, 'addService'])->name('add-services');
+Route::post('/store/service', [\App\Http\Controllers\Admin\ServiceController::class, 'storeService'])->name('store.services');
+Route::post('/delete/service/{id}', [\App\Http\Controllers\Admin\ServiceController::class, 'deleteService'])->name('delete.services');
 
 require __DIR__.'/auth.php';
