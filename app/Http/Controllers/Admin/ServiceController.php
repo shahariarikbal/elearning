@@ -7,6 +7,7 @@ use App\Http\Requests\ServiceRequest;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use File;
 
 class ServiceController extends Controller
 {
@@ -33,6 +34,37 @@ class ServiceController extends Controller
         ]);
         sleep(1);
         return redirect()->route('services')->with('success', 'Service has been created');
+    }
+
+    public function editService($id)
+    {
+        $service = Service::find($id);
+        return Inertia::render('Backend/ServiceEdit', ['service' => $service]);
+    }
+
+    public function updateService(Request $request, $id)
+    {
+        $service = Service::find($id);
+        if($request->hasFile('image')){
+            if(file_exists(public_path('service/'.$service->image))){
+                File::delete(public_path('service/'.$service->image));
+                $name = time() . '.' . $request->image->getClientOriginalExtension();
+                $request->image->move('service/', $name);
+                $service->image = $name;
+            }
+            else{
+                $name = time() . '.' . $request->image->getClientOriginalExtension();
+                $request->image->move('service/', $name);
+                $service->image = $name;
+            }
+
+        }
+        $service->title = $request->title;
+        $service->slug = str_replace(' ', '-', strtolower($request->title));
+        $service->description = $request->description;
+        $service->save();
+        sleep(1);
+        return redirect()->route('services')->with('success', 'Service has been updated');
     }
 
     public function deleteService($id)

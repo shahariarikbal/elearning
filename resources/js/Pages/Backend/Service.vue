@@ -48,14 +48,15 @@ import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout.vue';
 import { Head } from '@inertiajs/vue3';
 import Sidebar from '../../Shared/Backend/Sidebar.vue';
 import NavLink from '@/Components/NavLink.vue';
+import { useForm } from "@inertiajs/vue3";
 
 const props = defineProps({
     services: {
         type: Object,
         default: () => ({})
     }
-})
-const form = useForm();
+});
+const form = useForm({});
 function destroy(id) {
     if (confirm("Are you sure you want to Delete")) {
         form.delete(route('delete.services', id));
