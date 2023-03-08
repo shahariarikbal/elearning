@@ -1,5 +1,6 @@
 <template>
-<!--    <Head title="Welcome" />-->
+    <Head title="Welcome" />
+    <Layout />
     <!-- /Header -->
     <main>
         <!-- Home -->
@@ -93,69 +94,14 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" v-for="service in services" :key="service.id">
                         <div class="about-item-wrap">
-                            <img :src="'frontend/images/about-icon/Module.png'" class="image">
+                            <img :src="'/service/' + service.image" class="image">
                             <h4 class="title">
-                                আপডেটেড কোর্স মডিউল
+                                {{ service.title }}
                             </h4>
                             <p class="text">
-                                সময়োপযোগী এবং আন্তর্জাতিক কারিকুলাম অনুসরণ করে প্রতিটি কোর্সের মডিউল তৈরি করা হয়েছে।
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item-wrap">
-                            <img :src="'frontend/images/about-icon/Practice.png'" class="image">
-                            <h4 class="title">
-                                সুবিধামত অনুশীলন
-                            </h4>
-                            <p class="text">
-                                কোর্স গুলো আপনি আপনার সুবিধামত সময়ে আমাদের ওয়েবসাইট থেকে দেখতে পারবেন।
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item-wrap">
-                            <img :src="'frontend/images/about-icon/Support.png'" class="image">
-                            <h4 class="title">
-                                কোর্স সাপোর্ট
-                            </h4>
-                            <p class="text">
-                                কোর্সে জয়েন করার পর কোন লেসন বুঝতে সমস্যা হলে ২৪X৭ সাপোর্ট বিদ্যমান।
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item-wrap">
-                            <img :src="'frontend/images/about-icon/Live.png'" class="image">
-                            <h4 class="title">
-                                লাইভ ক্লাস
-                            </h4>
-                            <p class="text">
-                                কোর্সের লেসন এর উপর ভিত্তি করে যেকোনো সময় লাইভ ক্লাস করানো হয়।
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item-wrap">
-                            <img :src="'frontend/images/about-icon/Resources.png'" class="image">
-                            <h4 class="title">
-                                পর্যাপ্ত রিসোর্স সরবরাহ
-                            </h4>
-                            <p class="text">
-                                প্রতিটি কোর্সের এর সাথে কোর্স এবং লেসন সম্পর্কিত রিসোর্স প্রদান করা হয়।
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="about-item-wrap">
-                            <img :src="'frontend/images/about-icon/Certificate.png'" class="image">
-                            <h4 class="title">
-                                সার্টিফিকেশন
-                            </h4>
-                            <p class="text">
-                                প্রতিটি কোর্স শেষে কুইকটিম একাডেমি এর পক্ষ থেকে সার্টিফিকেট প্রদান করা হয়।
+                                {{ service.description }}
                             </p>
                         </div>
                     </div>
@@ -506,15 +452,34 @@
     <!-- /Footer -->
 </template>
 
-<script>
+<script setup>
     import Layout from '../Shared/Layout.vue';
     import Footer from '../Shared/Footer.vue';
     import NavLink from '../Shared/NavLink.vue';
-    export default {
-        layout: Layout,
-        components:{ Footer, NavLink }
-
-    }
+    import {useForm} from "@inertiajs/vue3";
+    const props = defineProps({
+        services: {
+            type: Object,
+            default: () => ({})
+        },
+        onlineCourses: {
+            type: Object,
+            default: () => ({})
+        },
+        offlineCourses: {
+            type: Object,
+            default: () => ({})
+        },
+        freeCourses: {
+            type: Object,
+            default: () => ({})
+        }
+    });
+    const form = useForm({});
+    // export default {
+    //     layout: Layout,
+    //     components:{ Footer, NavLink }
+    // }
 </script>
 
 <style>
