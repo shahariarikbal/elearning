@@ -100,7 +100,7 @@
                             <h4 class="title">
                                 {{ service.title }}
                             </h4>
-                            <p class="text">
+                            <p class="text" style="text-align: justify">
                                 {{ service.description }}
                             </p>
                         </div>
@@ -119,67 +119,25 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" v-for="onlineCourse in onlineCourses">
                         <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course1.jpg'">
+                            <a href="#" class="course-item-image-outer">
+                                <img :src="'course/' + onlineCourse.image">
                             </a>
                             <div class="course-item-content">
-                                <div class="course-price">
-                                    <del class="origin-price">15,000.00 ৳</del>
-                                    <span class="discount-price">9,000.00 ৳</span>
+                                <div class="course-price" v-if="onlineCourse.discount_price != null">
+                                    <del class="origin-price">{{ onlineCourse.real_price }} ৳</del>
+                                    <span class="discount-price">{{ onlineCourse.discount_price }} ৳</span>
                                 </div>
-                                <a href="course-details.html" class="course-title">Motion Design Professional Course (Online Batch)</a>
+                                <div class="course-price" v-else>
+                                    <del class="origin-price">{{ onlineCourse.discount_price }} ৳</del>
+                                    <span class="discount-price">{{ onlineCourse.real_price }} ৳</span>
+                                </div>
+                                <a href="#" class="course-title">{{ onlineCourse.title }}</a>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course2.jpg'">
-                            </a>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">9,000.00 ৳</span>
-                                </div>
-                                <a href="course-details.html" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course3.jpg'">
-                            </a>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">15,000.00 ৳</span>
-                                </div>
-                                <a href="course-details.html" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
+                                        {{ onlineCourse.lesson }} Lessons
                                     </div>
                                     <div class="meta-item course-students">
                                         <i class="far fa-user"></i>
@@ -203,67 +161,25 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" v-for="offlineCourse in offlineCourses">
                         <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course1.jpg'">
+                            <a href="#" class="course-item-image-outer">
+                                <img :src="'course/' + offlineCourse.image">
                             </a>
                             <div class="course-item-content">
-                                <div class="course-price">
-                                    <del class="origin-price">15,000.00 ৳</del>
-                                    <span class="discount-price">9,000.00 ৳</span>
+                                <div class="course-price" v-if="offlineCourse.discount_price != null">
+                                    <del class="origin-price">{{ offlineCourse.real_price }} ৳</del>
+                                    <span class="discount-price">{{ offlineCourse.discount_price }} ৳</span>
                                 </div>
-                                <a href="course-details.html" class="course-title">Motion Design Professional Course (Online Batch)</a>
+                                <div class="course-price" v-else>
+                                    <del class="origin-price">{{ offlineCourse.discount_price }} ৳</del>
+                                    <span class="discount-price">{{ offlineCourse.real_price }} ৳</span>
+                                </div>
+                                <a href="#" class="course-title">{{ offlineCourse.title }}</a>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course2.jpg'">
-                            </a>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">9,000.00 ৳</span>
-                                </div>
-                                <a href="course-details.html" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course3.jpg'">
-                            </a>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">15,000.00 ৳</span>
-                                </div>
-                                <a href="course-details.html" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
+                                        {{ offlineCourse.lesson }} Lessons
                                     </div>
                                     <div class="meta-item course-students">
                                         <i class="far fa-user"></i>
@@ -287,67 +203,25 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" v-for="recordCourse in recordCourses">
                         <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course1.jpg'">
+                            <a href="#" class="course-item-image-outer">
+                                <img :src="'course/' + recordCourse.image">
                             </a>
                             <div class="course-item-content">
-                                <div class="course-price">
-                                    <del class="origin-price">15,000.00 ৳</del>
-                                    <span class="discount-price">9,000.00 ৳</span>
+                                <div class="course-price" v-if="recordCourse.discount_price != null">
+                                    <del class="origin-price">{{ recordCourse.real_price }} ৳</del>
+                                    <span class="discount-price">{{ recordCourse.discount_price }} ৳</span>
                                 </div>
-                                <a href="course-details.html" class="course-title">Motion Design Professional Course (Online Batch)</a>
+                                <div class="course-price" v-else>
+                                    <del class="origin-price">{{ recordCourse.discount_price }} ৳</del>
+                                    <span class="discount-price">{{ recordCourse.real_price }} ৳</span>
+                                </div>
+                                <a href="#" class="course-title">{{ recordCourse.title }}</a>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course2.jpg'">
-                            </a>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">9,000.00 ৳</span>
-                                </div>
-                                <a href="course-details.html" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course3.jpg'">
-                            </a>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">15,000.00 ৳</span>
-                                </div>
-                                <a href="course-details.html" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
+                                        {{ recordCourse.lesson }} Lessons
                                     </div>
                                     <div class="meta-item course-students">
                                         <i class="far fa-user"></i>
@@ -371,67 +245,25 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" v-for="freeCourse in freeCourses">
                         <div class="course-item-wrap">
-                            <a href="course-details.html" class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course1.jpg'">
+                            <a href="#" class="course-item-image-outer">
+                                <img :src="'course/' + freeCourse.image">
                             </a>
                             <div class="course-item-content">
-                                <div class="course-price">
-                                    <del class="origin-price">15,000.00 ৳</del>
-                                    <span class="discount-price">9,000.00 ৳</span>
+                                <div class="course-price" v-if="freeCourse.discount_price != null">
+                                    <del class="origin-price">{{ freeCourse.real_price }} ৳</del>
+                                    <span class="discount-price">{{ freeCourse.discount_price }} ৳</span>
                                 </div>
-                                <a href="course-details.html" class="course-title">Motion Design Professional Course (Online Batch)</a>
+                                <div class="course-price" v-else>
+                                    <del class="origin-price">{{ freeCourse.discount_price }} ৳</del>
+                                    <span class="discount-price">{{ freeCourse.real_price }} ৳</span>
+                                </div>
+                                <a href="#" class="course-title">{{ freeCourse.title }}</a>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <div class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course2.jpg'">
-                            </div>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">9,000.00 ৳</span>
-                                </div>
-                                <a href="#" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
-                                    </div>
-                                    <div class="meta-item course-students">
-                                        <i class="far fa-user"></i>
-                                        300 Students
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="course-item-wrap">
-                            <div class="course-item-image-outer">
-                                <img :src="'frontend/images/course/course3.jpg'">
-                            </div>
-                            <div class="course-item-content">
-                                <div class="course-price">
-                                    <span class="discount-price">15,000.00 ৳</span>
-                                </div>
-                                <a href="#" class="course-title">UI UX Design Professional Course for Beginners (Online Batch)</a>
-                                <div class="course-meta">
-                                    <div class="meta-item course-lesson">
-                                        <i class="far fa-file-alt"></i>
-                                        24 Lessons
+                                        {{ freeCourse.lesson }} Lessons
                                     </div>
                                     <div class="meta-item course-students">
                                         <i class="far fa-user"></i>
@@ -471,6 +303,10 @@
             default: () => ({})
         },
         freeCourses: {
+            type: Object,
+            default: () => ({})
+        },
+        recordCourses: {
             type: Object,
             default: () => ({})
         }

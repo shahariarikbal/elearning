@@ -16,7 +16,6 @@
                                     <th> SL </th>
                                     <th> Image </th>
                                     <th> Title </th>
-                                    <th> Description </th>
                                     <th> Action </th>
                                 </tr>
                                 </thead>
@@ -27,7 +26,6 @@
                                         <img :src="'/service/' + service.image" height="100" width="100" />
                                     </td>
                                     <td>{{ service.title }}</td>
-                                    <td> {{ service.description }} </td>
                                     <td>
                                         <NavLink :href="'/service/edit/' + service.id" class="btn btn-sm btn-primary"><i class="mdi mdi-pencil"></i></NavLink>
                                         <button type="button" @click="destroy(service.id)" class="btn btn-sm btn-danger" style="margin-left: 15px;"><i class="mdi mdi-delete"></i></button>

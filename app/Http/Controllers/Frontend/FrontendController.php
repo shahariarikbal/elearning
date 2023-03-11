@@ -12,25 +12,25 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        sleep(1);
-        return Inertia::render('Welcome');
         $services = Service::select(['id', 'title', 'slug', 'image', 'description'])->orderBy('created_at', 'desc')->get();
         $onlineCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'online')
-            ->whereStatus(1)
             ->get();
 
         $offlineCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'offline')
-            ->whereStatus(1)
             ->get();
 
         $freeCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'free')
-            ->whereStatus(1)
+            ->get();
+
+        $recordCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+            ->orderBy('created_at', 'desc')
+            ->where('type', 'record')
             ->get();
 
         sleep(1);
@@ -39,6 +39,7 @@ class FrontendController extends Controller
             'onlineCourses' => $onlineCourses,
             'offlineCourses' => $offlineCourses,
             'freeCourses' => $freeCourses,
+            'recordCourses' => $recordCourses,
         ]);
     }
 
