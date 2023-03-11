@@ -10,13 +10,13 @@ class FrontendController extends Controller
 {
     public function index()
     {
-        sleep(2);
+        sleep(1);
         return Inertia::render('Welcome');
     }
 
     public function courses()
     {
-        sleep(2);
+        sleep(1);
         return Inertia::render('Courses/CourseList');
     }
 }
