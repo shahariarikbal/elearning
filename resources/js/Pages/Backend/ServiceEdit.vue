@@ -8,7 +8,7 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Service Create</h4>
+                            <h4 class="card-title">Service Edit</h4>
                             <NavLink :href="route('services')" class="btn btn-sm btn-primary float-end" style="margin-top: -35px;">Services</NavLink>
                             <div class="row">
                                 <div class="col-md-3"></div>
@@ -41,7 +41,7 @@
                                             <input type="file" name="image" class="form-control"
                                               @input="form.image = $event.target.files[0]"
                                             />
-
+                                            <img :src="'/service/' + form.image" style="height: 80px; width: 80px;" alt="service image" />
                                             <div
                                                 v-if="form.errors.image"
                                                 class="text-sm text-red-600"
@@ -70,14 +70,22 @@ import NavLink from '@/Components/NavLink.vue';
 import Layout from "@/Shared/Layout.vue";
 import { useForm } from "@inertiajs/vue3";
 
+const props = defineProps({
+    service: {
+        type: Object,
+        default: () => ({})
+    }
+});
+
 const form = useForm({
-    title: "",
-    image: "",
-    description: "",
+    id: props.service.id,
+    title: props.service.title,
+    image: props.service.image,
+    description: props.service.description,
 });
 
 const submit = () => {
-    form.post(route("store.services"), {
+    form.post(route("update.service", props.service.id), {
         forceFormData: true,
     });
 };
