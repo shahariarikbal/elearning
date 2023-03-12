@@ -25,11 +25,14 @@ class CourseRequest extends FormRequest
     {
         return [
             'title' => 'required|string|max:255',
+            'trainer_id' => 'required',
             'short_description' => 'required',
             'long_description' => 'required',
             'type' => 'required',
             'real_price' => 'required',
             'lesson' => 'required',
+            'duration' => 'required',
+            'video_url' => 'required',
             'image' => 'mimes:jpeg,jpg,png,gif|required|max:10000',
         ];
     }

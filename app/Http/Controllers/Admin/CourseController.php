@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\CourseRequest;
 use Inertia\Inertia;
 use App\Models\Course;
+use App\Models\Trainer;
 use File;
 
 class CourseController extends Controller
@@ -19,7 +20,8 @@ class CourseController extends Controller
 
     public function addCourse()
     {
-        return Inertia::render('Backend/CourseAdd');
+        $trainers = Trainer::all();
+        return Inertia::render('Backend/CourseAdd', ['trainers' => $trainers]);
     }
 
     public function storeCourse(CourseRequest $request)
@@ -28,12 +30,15 @@ class CourseController extends Controller
         $imagePath = $request->image->move('course/', $imageName);
         Course::create([
             'title' => $request->title,
+            'trainer_id' => $request->trainer_id,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
             'type' => $request->type,
             'real_price' => $request->real_price,
             'discount_price' => $request->discount_price,
             'lesson' => $request->lesson,
+            'duration' => $request->duration,
+            'video_url' => $request->video_url,
             'image' => $imageName,
         ]);
         sleep(1);

@@ -58,6 +58,16 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="trainer_id">Trainer</label>
+                                            <select class="form-control" v-model="form.trainer_id" name="trainer_id">
+                                                <option v-for="trainer in trainers" :value="trainer.id" :key="trainer.id">{{ trainer.name }}</option>
+                                            </select>
+
+                                            <div v-if="form.errors.trainer_id" class="text-sm text-red-600">
+                                                {{ form.errors.trainer_id }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="real_price">Real Price</label>
                                             <input type="number" name="real_price" v-model="form.real_price" class="form-control"
                                                 placeholder="Enter course real_price" />
@@ -82,6 +92,24 @@
 
                                             <div v-if="form.errors.lesson" class="text-sm text-red-600">
                                                 {{ form.errors.lesson }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="duration">Course Duration</label>
+                                            <input type="text" name="duration" v-model="form.duration" class="form-control"
+                                                placeholder="Enter course duration" />
+
+                                            <div v-if="form.errors.duration" class="text-sm text-red-600">
+                                                {{ form.errors.duration }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="video_url">Video URL</label>
+                                            <input type="text" name="video_url" v-model="form.video_url" class="form-control"
+                                                placeholder="Enter course video url" />
+
+                                            <div v-if="form.errors.video_url" class="text-sm text-red-600">
+                                                {{ form.errors.video_url }}
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -115,14 +143,24 @@ import NavLink from '@/Components/NavLink.vue';
 import Layout from "@/Shared/Layout.vue";
 import { useForm } from "@inertiajs/vue3";
 
+const props = defineProps({
+    trainers: {
+        type: Object,
+        default: () => ({})
+    }
+});
+
 const form = useForm({
     title: "",
+    trainer_id: "",
     short_description: "",
     long_description: "",
     type: "",
     real_price: "",
     discount_price: "",
     lesson: "",
+    duration: "",
+    video_url: "",
     image: "",
 });
 
