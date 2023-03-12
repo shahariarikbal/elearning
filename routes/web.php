@@ -58,4 +58,10 @@ Route::get('/course/edit/{id}', [\App\Http\Controllers\Admin\CourseController::c
 Route::post('/course/update/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'updateCourse'])->name('update.course');
 Route::delete('/delete/course/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'deleteCourse'])->name('delete.courses');
 
+//Trainers....
+Route::get('/trainer/list', [\App\Http\Controllers\Admin\TrainerController::class, 'trainer'])->name('trainer-list');
+Route::get('/add/trainer', [\App\Http\Controllers\Admin\TrainerController::class, 'addTrainer'])->name('add-trainers');
+Route::post('/store/trainer', [\App\Http\Controllers\Admin\TrainerController::class, 'storeTrainer'])->name('store.trainers');
+Route::delete('/delete/trainer/{id}', [\App\Http\Controllers\Admin\TrainerController::class, 'deleteTrainer'])->name('delete.trainers');
+
 require __DIR__.'/auth.php';

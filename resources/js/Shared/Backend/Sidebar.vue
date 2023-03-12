@@ -35,6 +35,12 @@
                     </NavLink>
                 </li>
                 <li class="nav-item">
+                    <NavLink class="nav-link" :href="route('trainer-list')">
+                        <span class="menu-title">Trainers</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </NavLink>
+                </li>
+                <li class="nav-item">
                     <NavLink class="nav-link" :href="'users'">
                         <span class="menu-title">Users</span>
                         <i class="mdi mdi-contacts menu-icon"></i>

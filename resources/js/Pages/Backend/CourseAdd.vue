@@ -8,7 +8,7 @@
                 <div class="col-lg-12 grid-margin stretch-card">
                     <div class="card">
                         <div class="card-body">
-                            <h4 class="card-title">Service Create</h4>
+                            <h4 class="card-title">Course Create</h4>
                             <NavLink :href="route('course-list')" class="btn btn-sm btn-primary float-end"
                                 style="margin-top: -35px;">Courses</NavLink>
                             <div class="row">
