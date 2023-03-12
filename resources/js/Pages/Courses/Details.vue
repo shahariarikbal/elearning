@@ -33,18 +33,16 @@
                         <div class="col-md-8">
                             <div class="course-details-wrapper">
                                 <div class="course-details-video">
-                                    <video controls>
-                                        <source src="https://www.youtube.com/watch?v=e5BkO3UtN1I&t=19s">
-                                    </video>
+                                    <iframe width="560" height="315" :src="course.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                                 <div class="course-details-outer">
                                     <h3 class="title">
-                                        Fiverr কোর্সটি থেকে যা শিখবেন..
+                                        {{ course.title }} কোর্সটি থেকে যা শিখবেন..
                                     </h3>
                                     <p class="description">
-                                        মার্কেটপ্লেসে নিজের আকর্ষনীয় প্রোফাইল তৈরী এবং কাজ পাবার পদ্ধতি সম্পর্কে বিস্তারিত জানতে পারবেন
+                                        {{ course.long_description }}
                                     </p>
-                                    <p class="description">
+                                    <!-- <p class="description">
                                         আপনাকে একজন সফল  ফ্রিল্যান্সার হতে সর্বোচ্চ সহযোগীতা করবে।
                                     </p>
                                     <p class="description">
@@ -52,7 +50,7 @@
                                     </p>
                                     <p class="description">
                                         আপনাকে একজন সফল  ফ্রিল্যান্সার হতে সর্বোচ্চ সহযোগীতা করবে।
-                                    </p>
+                                    </p> -->
                                 </div>
                                 <div class="course-review-outer">
                                     <h4 class="title">
@@ -98,34 +96,35 @@
                         <div class="col-md-4">
                             <div class="course-details-sidebar-wrapper">
                                 <div class="course-price-outer">
-                                    <span class="price">7500 BDT</span>
+                                    <span class="price" v-if="course.discount_price != null">{{ course.discount_price }} BDT</span>
+                                    <span class="price" v-else>{{ course.real_price }} BDT</span>
                                 </div>
                                 <div class="course-instructor-outer">
                                     <div class="course-instructor-image">
-                                        <img src="assets/images/user-default.png" alt="" class="img-fluid rounded-circle">
+                                        <img :src="'/trainer/' + course.trainer.avatar" alt="trainer" class="img-fluid rounded-circle">
                                     </div>
                                     <div class="course-instructor-name">
-                                        <a href="#" class="instructor-name">Saidul Isalm</a>
-                                        <p class="instructor-des">Graphic Designer and Freelancer</p>
+                                        <a href="#" class="instructor-name">{{ course.trainer.name }}</a>
+                                        <p class="instructor-des">{{ course.trainer.designation_expertise }}</p>
                                     </div>
                                 </div>
                                 <ul>
-                                    <li>
+                                    <!-- <li>
                                         <strong>ক্যাটাগরিঃ</strong> <span>Marketplace</span>
-                                    </li>
+                                    </li> -->
                                     <li>
                                         <strong>কোর্সটি করছেনঃ</strong> <span>১৩,৮১৯ শিক্ষার্থী</span>
                                     </li>
                                     <li>
-                                        <strong>ভিডিও সংখ্যাঃ</strong> <span>৬৪ টি</span>
+                                        <strong>ভিডিও সংখ্যাঃ</strong> <span>{{ course.lesson }}</span>
                                     </li>
                                     <li>
-                                        <strong>সময় লাগবেঃ</strong> <span>১১ ঘণ্টা, ১৪ মিনিট, ৫৭ সেকেন্ড</span>
+                                        <strong>সময় লাগবেঃ</strong> <span>{{ course.duration }}</span>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <i class="fas fa-certificate"></i>
-                                        <strong>সর্বশেষ সংষ্করণঃ</strong> <span>বুধ, সেপ্টে ৩০, ২০২০ ১২:৩২ অপরাহ্ণ</span>
-                                    </li>
+                                        <strong>সর্বশেষ সংষ্করণঃ</strong> <span>{{ course.updated_at }}</span>
+                                    </li> -->
                                 </ul>
                                 <a href="#" class="course-details-btn-inner">কোর্সটি শুরু করুন</a>
                             </div>
@@ -143,6 +142,13 @@
 import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
 import {useForm} from "@inertiajs/vue3";
+
+const props = defineProps({
+    course: {
+        type: Object,
+        default: () => ({})
+    }
+});
 
 const form = useForm({});
 </script>

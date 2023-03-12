@@ -52,7 +52,7 @@ class FrontendController extends Controller
     public function courseDetails($id)
     {
         sleep(1);
-        $course = Course::find($id);
+        $course = Course::where('id',$id)->with('trainer')->first();
         return Inertia::render('Courses/Details', ['course' => $course]);
     }
 }
