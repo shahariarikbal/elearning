@@ -48,4 +48,11 @@ class FrontendController extends Controller
         sleep(1);
         return Inertia::render('Courses/CourseList');
     }
+
+    public function courseDetails($id)
+    {
+        sleep(1);
+        $course = Course::find($id);
+        return Inertia::render('Courses/Details', ['course' => $course]);
+    }
 }

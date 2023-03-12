@@ -27,6 +27,7 @@ Route::get('clear', function () {
 
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class, 'courses']);
+Route::get('/course/details/{id}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

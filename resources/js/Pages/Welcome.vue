@@ -121,9 +121,9 @@
                 <div class="row">
                     <div class="col-md-4" v-for="onlineCourse in onlineCourses">
                         <div class="course-item-wrap">
-                            <a href="#" class="course-item-image-outer">
-                                <img :src="'course/' + onlineCourse.image">
-                            </a>
+                            <NavLink :href="'course/details/' + onlineCourse.id " class="course-item-image-outer">
+                                <img :src="'course/' + onlineCourse.image" alt="course image" />
+                            </NavLink>
                             <div class="course-item-content">
                                 <div class="course-price" v-if="onlineCourse.discount_price != null">
                                     <del class="origin-price">{{ onlineCourse.real_price }} ৳</del>
@@ -133,7 +133,7 @@
                                     <del class="origin-price">{{ onlineCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ onlineCourse.real_price }} ৳</span>
                                 </div>
-                                <a href="#" class="course-title">{{ onlineCourse.title }}</a>
+                                <NavLink :href="'course/details/' + onlineCourse.id " class="course-title">{{ onlineCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
@@ -163,9 +163,9 @@
                 <div class="row">
                     <div class="col-md-4" v-for="offlineCourse in offlineCourses">
                         <div class="course-item-wrap">
-                            <a href="#" class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + offlineCourse.id" class="course-item-image-outer">
                                 <img :src="'course/' + offlineCourse.image">
-                            </a>
+                            </NavLink>
                             <div class="course-item-content">
                                 <div class="course-price" v-if="offlineCourse.discount_price != null">
                                     <del class="origin-price">{{ offlineCourse.real_price }} ৳</del>
@@ -175,7 +175,7 @@
                                     <del class="origin-price">{{ offlineCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ offlineCourse.real_price }} ৳</span>
                                 </div>
-                                <a href="#" class="course-title">{{ offlineCourse.title }}</a>
+                                <NavLink :href="'course/details/' + offlineCourse.id" class="course-title">{{ offlineCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
@@ -205,9 +205,9 @@
                 <div class="row">
                     <div class="col-md-4" v-for="recordCourse in recordCourses">
                         <div class="course-item-wrap">
-                            <a href="#" class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + recordCourse.id" class="course-item-image-outer">
                                 <img :src="'course/' + recordCourse.image">
-                            </a>
+                            </NavLink>
                             <div class="course-item-content">
                                 <div class="course-price" v-if="recordCourse.discount_price != null">
                                     <del class="origin-price">{{ recordCourse.real_price }} ৳</del>
@@ -217,7 +217,7 @@
                                     <del class="origin-price">{{ recordCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ recordCourse.real_price }} ৳</span>
                                 </div>
-                                <a href="#" class="course-title">{{ recordCourse.title }}</a>
+                                <NavLink :href="'course/details/' + recordCourse.id" class="course-title">{{ recordCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
@@ -247,9 +247,9 @@
                 <div class="row">
                     <div class="col-md-4" v-for="freeCourse in freeCourses">
                         <div class="course-item-wrap">
-                            <a href="#" class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + freeCourse.id" class="course-item-image-outer">
                                 <img :src="'course/' + freeCourse.image">
-                            </a>
+                            </NavLink>
                             <div class="course-item-content">
                                 <div class="course-price" v-if="freeCourse.discount_price != null">
                                     <del class="origin-price">{{ freeCourse.real_price }} ৳</del>
@@ -259,7 +259,7 @@
                                     <del class="origin-price">{{ freeCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ freeCourse.real_price }} ৳</span>
                                 </div>
-                                <a href="#" class="course-title">{{ freeCourse.title }}</a>
+                                <NavLink :href="'course/details/' + freeCourse.id" class="course-title">{{ freeCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
