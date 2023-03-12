@@ -40,6 +40,7 @@ import Sidebar from '../../Shared/Backend/Sidebar.vue';
                                     <th> Course Type </th>
                                     <th> Real Price </th>
                                     <th> Discount Price </th>
+                                    <th> Trainer </th>
                                     <th> Action </th>
                                 </tr>
                                 </thead>
@@ -54,6 +55,7 @@ import Sidebar from '../../Shared/Backend/Sidebar.vue';
                                         <td> {{ course.type }} </td>
                                         <td> {{ course.real_price }} </td>
                                         <td> {{ course.discount_price }} </td>
+                                        <td> {{ course.trainer.name }} </td>
                                         <td>
                                             <NavLink :href="'/course/edit/' + course.id" class="btn btn-sm btn-primary"><i class="mdi mdi-pencil"></i></NavLink>
                                             <button type="button" @click="destroy(course.id)" class="btn btn-sm btn-danger" style="margin-left: 15px;"><i class="mdi mdi-delete"></i></button>

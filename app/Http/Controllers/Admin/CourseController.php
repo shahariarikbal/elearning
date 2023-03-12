@@ -14,7 +14,7 @@ class CourseController extends Controller
 {
     public function courses()
     {
-        $courses = Course::orderBy('created_at', 'desc')->get();
+        $courses = Course::orderBy('created_at', 'desc')->with('trainer')->get();
         return Inertia::render('Backend/Courses', ['courses' => $courses]);
     }
 
