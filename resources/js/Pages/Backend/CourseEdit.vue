@@ -56,6 +56,16 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="trainer_id">Trainer</label>
+                                            <select class="form-control" v-model="form.trainer_id" name="trainer_id">
+                                                <option v-for="trainer in trainers" :value="trainer.id" :key="trainer.id">{{ trainer.name }}</option>
+                                            </select>
+
+                                            <div v-if="form.errors.trainer_id" class="text-sm text-red-600">
+                                                {{ form.errors.trainer_id }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="real_price">Real Price</label>
                                             <input type="number" name="real_price" v-model="form.real_price"
                                                 class="form-control" placeholder="Enter course real_price" />
@@ -80,6 +90,24 @@
 
                                             <div v-if="form.errors.lesson" class="text-sm text-red-600">
                                                 {{ form.errors.lesson }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="duration">Course Duration</label>
+                                            <input type="text" name="duration" v-model="form.duration" class="form-control"
+                                                placeholder="Enter course duration" />
+
+                                            <div v-if="form.errors.duration" class="text-sm text-red-600">
+                                                {{ form.errors.duration }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="video_url">Video URL</label>
+                                            <input type="text" name="video_url" v-model="form.video_url" class="form-control"
+                                                placeholder="Enter course video url" />
+
+                                            <div v-if="form.errors.video_url" class="text-sm text-red-600">
+                                                {{ form.errors.video_url }}
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -118,6 +146,10 @@ const props = defineProps({
     course: {
         type: Object,
         default: () => ({})
+    },
+    trainers: {
+        type: Object,
+        default: () => ({})
     }
 });
 
@@ -129,7 +161,10 @@ const form = useForm({
     type: props.course.type,
     real_price: props.course.real_price,
     discount_price: props.course.discount_price,
+    trainer_id: props.course.trainer_id,
     lesson: props.course.lesson,
+    duration: props.course.duration,
+    video_url: props.course.video_url,
     image: props.course.image,
 });
 

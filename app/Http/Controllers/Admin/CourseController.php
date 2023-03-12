@@ -47,8 +47,9 @@ class CourseController extends Controller
 
     public function editCourse($id)
     {
+        $trainers = Trainer::all();
         $course = Course::find($id);
-        return Inertia::render('Backend/CourseEdit', ['course' => $course]);
+        return Inertia::render('Backend/CourseEdit', ['course' => $course, 'trainers'=>$trainers]);
     }
 
     public function updateCourse(Request $request, $id)
@@ -74,7 +75,10 @@ class CourseController extends Controller
         $course->type = $request->type;
         $course->real_price = $request->real_price;
         $course->discount_price = $request->discount_price;
+        $course->trainer_id = $request->trainer_id;
         $course->lesson = $request->lesson;
+        $course->duration = $request->duration;
+        $course->video_url = $request->video_url;
         $course->save();
         sleep(1);
         return redirect()->route('course-list')->with('success', 'Course has been updated');
