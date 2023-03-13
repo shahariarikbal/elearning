@@ -24,7 +24,9 @@ import '../backend/js/misc.js';
 import '../backend/js/dashboard.js';
 import '../backend/js/todolist.js';
 
-
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/vue3'
+const user = computed(() => usePage().props.auth.user)
 
 import { createApp, h } from 'vue';
 import { createInertiaApp } from '@inertiajs/vue3';

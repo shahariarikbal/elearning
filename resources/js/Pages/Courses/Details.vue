@@ -4,19 +4,19 @@
         <Layout />
         <main>
             <!-- Banner -->
-            <section class="banner-section" style="background-image: url(assets/images/banner.jpg);">
+            <section class="banner-section" :style="{ 'background-image': 'url('+ '/frontend/images/banner.jpg' + ')' }">
                 <div class="container">
                     <div class="col-md-12">
                         <h1 class="banner-title">Course Details</h1>
                         <ul class="banner-item">
                             <li>
-                                <a href="index.html">
+                                <NavLink href="/">
                                     <i class="fas fa-home"></i>
                                     Home
-                                </a>
+                                </NavLink>
                             </li>
                             <li class="active">
-                                <a href="course.html">
+                                <a href="#">
                                     single
                                 </a>
                             </li>
@@ -57,7 +57,7 @@
                                         শিক্ষার্থীদের মতামত
                                     </h4>
                                     <div class="course-review-item">
-                                        <img src="assets/images/user-default.png" class="user-image">
+                                        <img :src="'/frontend/images/user-default.png'" class="user-image">
                                         <div class="course-review-content">
                                             <h5 class="author-name">
                                                 Shakib Hossain <span class="review-date"> - 10 months ago</span>
@@ -72,7 +72,7 @@
                                         </div>
                                     </div>
                                     <div class="course-review-item reply">
-                                        <img src="assets/images/user-default.png" class="user-image">
+                                        <img :src="'/frontend/images/user-default.png'" class="user-image">
                                         <div class="course-review-reply-content">
                                             <h5 class="author-name">
                                                 Shakib Hossain <span class="review-date"> - 10 months ago</span>
@@ -126,7 +126,8 @@
                                         <strong>সর্বশেষ সংষ্করণঃ</strong> <span>{{ course.updated_at }}</span>
                                     </li> -->
                                 </ul>
-                                <a href="#" class="course-details-btn-inner">কোর্সটি শুরু করুন</a>
+                                <NavLink href="#" class="course-details-btn-inner" v-if="$page.props.auth.user">কোর্সটি শুরু করুন</NavLink>
+                                <NavLink href="/user/login" class="course-details-btn-inner" v-else>কোর্সটি শুরু করুন</NavLink>
                             </div>
                         </div>
                     </div>
@@ -141,6 +142,7 @@
 <script setup>
 import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
+import NavLink from '../../Shared/NavLink.vue';
 import {useForm} from "@inertiajs/vue3";
 
 const props = defineProps({
