@@ -3,7 +3,7 @@
         <header class="header-section">
             <nav class="nav-items-wrapper">
                 <NavLink href="/" class="navbar-brand">
-                    <img class="brand" :src="'/setting/' + setting.logo" alt="Logo">
+                    <img class="brand" :src="'/setting/' + $page.props.setting.allSetting.logo" alt="Logo">
                 </NavLink>
                 <div class="nav-toggle-btn">
                     <div class="btn-inner"></div>
@@ -46,13 +46,6 @@
 
 <script>
 import NavLink from "./NavLink.vue";
-
-const props = defineProps({
-    setting: {
-        type: Object,
-        default: () => ({})
-    }
-});
 
 export default {
     name: "Header",

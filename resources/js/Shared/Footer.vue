@@ -10,42 +10,42 @@
                             </h4>
                             <ul class="footer-list">
                                 <li class="footer-list-item">
-                                    <a class="footer-list-item-link" href="tel:+8801797950360">
+                                    <a class="footer-list-item-link" :href="'tel:'+$page.props.setting.allSetting.phone">
                                         <i class="fas fa-phone-alt"></i>
-                                        +880 1797 950 360
+                                        {{ $page.props.setting.allSetting.phone }}
                                     </a>
                                 </li>
-                                <li class="footer-list-item">
+                                <!-- <li class="footer-list-item">
                                     <a class="footer-list-item-link" href="tel:+8801828165194">
                                         <i class="fas fa-phone-alt"></i>
                                         +880 1828 165 194
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="footer-list-item">
-                                    <a class="footer-list-item-link" href="mailto:support@quickteamacademy.com">
+                                    <a class="footer-list-item-link" :href="'mailto:'+$page.props.setting.allSetting.email">
                                         <i class="fas fa-envelope"></i>
-                                        support@quickteamacademy.com
+                                        {{ $page.props.setting.allSetting.email }}
                                     </a>
                                 </li>
                             </ul>
                             <ul class="footer-social-links">
                                 <li class="footer-social-link-item">
-                                    <a href="#">
+                                    <a :href="$page.props.setting.allSetting.facebook" target="_blank">
                                         <i class="fab fa-facebook-f"></i>
                                     </a>
                                 </li>
                                 <li class="footer-social-link-item">
-                                    <a href="#">
+                                    <a :href="$page.props.setting.allSetting.twitter" target="_blank">
                                         <i class="fab fa-twitter"></i>
                                     </a>
                                 </li>
                                 <li class="footer-social-link-item">
-                                    <a href="#">
+                                    <a :href="$page.props.setting.allSetting.instagram" target="_blank">
                                         <i class="fab fa-instagram"></i>
                                     </a>
                                 </li>
                                 <li class="footer-social-link-item">
-                                    <a href="#">
+                                    <a :href="$page.props.setting.allSetting.youtube" target="_blank">
                                         <i class="fab fa-youtube"></i>
                                     </a>
                                 </li>
