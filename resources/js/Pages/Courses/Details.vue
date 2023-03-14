@@ -126,8 +126,7 @@
                                         <strong>সর্বশেষ সংষ্করণঃ</strong> <span>{{ course.updated_at }}</span>
                                     </li> -->
                                 </ul>
-                                <NavLink href="#" class="course-details-btn-inner" v-if="$page.props.auth.user">কোর্সটি শুরু করুন</NavLink>
-                                <NavLink href="/user/login" class="course-details-btn-inner" v-else>কোর্সটি শুরু করুন</NavLink>
+                                <NavLink :href="'/user/register/' + course.id + '/' + course.slug " class="course-details-btn-inner">কোর্সটি শুরু করুন</NavLink>
                             </div>
                         </div>
                     </div>

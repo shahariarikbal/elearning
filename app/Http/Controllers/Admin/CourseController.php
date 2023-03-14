@@ -30,6 +30,7 @@ class CourseController extends Controller
         $imagePath = $request->image->move('course/', $imageName);
         Course::create([
             'title' => $request->title,
+            'slug' => str_replace(' ', '-', strtolower($request->title)),
             'trainer_id' => $request->trainer_id,
             'short_description' => $request->short_description,
             'long_description' => $request->long_description,
@@ -70,6 +71,7 @@ class CourseController extends Controller
 
         }
         $course->title = $request->title;
+        $course->slug = str_replace(' ', '-', strtolower($request->title));
         $course->short_description = $request->short_description;
         $course->long_description = $request->long_description;
         $course->type = $request->type;

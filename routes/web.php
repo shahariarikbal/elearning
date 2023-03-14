@@ -27,7 +27,7 @@ Route::get('clear', function () {
 
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class, 'courses']);
-Route::get('/course/details/{id}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
+Route::get('/course/details/{id}/{slug}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -40,7 +40,8 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/user/login', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userLoginFormShow']);
-Route::get('/user/register', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userRegisterFormShow']);
+Route::get('/user/register/{id}/{slug}', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userRegisterFormShow']);
+Route::post('/user/store', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userStore'])->name('store.user');
 
 // Services....
 Route::get('/services', [\App\Http\Controllers\Admin\ServiceController::class, 'services'])->name('services');

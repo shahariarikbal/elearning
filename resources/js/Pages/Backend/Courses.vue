@@ -36,7 +36,6 @@ import Sidebar from '../../Shared/Backend/Sidebar.vue';
                                     <th> SL </th>
                                     <th> Image </th>
                                     <th> Title </th>
-                                    <th> Short Description </th>
                                     <th> Course Type </th>
                                     <th> Real Price </th>
                                     <th> Discount Price </th>
@@ -51,7 +50,6 @@ import Sidebar from '../../Shared/Backend/Sidebar.vue';
                                             <img :src="'/course/' + course.image" height="100" width="100" />
                                         </td>
                                         <td>{{ course.title }}</td>
-                                        <td> {{ course.short_description }} </td>
                                         <td> {{ course.type }} </td>
                                         <td> {{ course.real_price }} </td>
                                         <td> {{ course.discount_price }} </td>

@@ -13,22 +13,22 @@ class FrontendController extends Controller
     public function index()
     {
         $services = Service::select(['id', 'title', 'slug', 'image', 'description'])->orderBy('created_at', 'desc')->get();
-        $onlineCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+        $onlineCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'online')
             ->get();
 
-        $offlineCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+        $offlineCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'offline')
             ->get();
 
-        $freeCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+        $freeCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'free')
             ->get();
 
-        $recordCourses = Course::select(['id', 'title', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+        $recordCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
             ->where('type', 'record')
             ->get();
@@ -49,7 +49,7 @@ class FrontendController extends Controller
         return Inertia::render('Courses/CourseList');
     }
 
-    public function courseDetails($id)
+    public function courseDetails($id, $slug)
     {
         sleep(1);
         $course = Course::where('id',$id)->with('trainer')->first();

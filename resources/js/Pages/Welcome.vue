@@ -120,8 +120,9 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4" v-for="onlineCourse in onlineCourses">
+
                         <div class="course-item-wrap">
-                            <NavLink :href="'course/details/' + onlineCourse.id " class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + onlineCourse.id + '/' + onlineCourse.slug " class="course-item-image-outer">
                                 <img :src="'course/' + onlineCourse.image" alt="course image" />
                             </NavLink>
                             <div class="course-item-content">
@@ -133,7 +134,7 @@
                                     <del class="origin-price">{{ onlineCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ onlineCourse.real_price }} ৳</span>
                                 </div>
-                                <NavLink :href="'course/details/' + onlineCourse.id " class="course-title">{{ onlineCourse.title }}</NavLink>
+                                <NavLink :href="'course/details/' + onlineCourse.id + '/' + onlineCourse.slug " class="course-title">{{ onlineCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
@@ -163,7 +164,7 @@
                 <div class="row">
                     <div class="col-md-4" v-for="offlineCourse in offlineCourses">
                         <div class="course-item-wrap">
-                            <NavLink :href="'course/details/' + offlineCourse.id" class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + offlineCourse.id + '/' + offlineCourse.slug" class="course-item-image-outer">
                                 <img :src="'course/' + offlineCourse.image">
                             </NavLink>
                             <div class="course-item-content">
@@ -175,7 +176,7 @@
                                     <del class="origin-price">{{ offlineCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ offlineCourse.real_price }} ৳</span>
                                 </div>
-                                <NavLink :href="'course/details/' + offlineCourse.id" class="course-title">{{ offlineCourse.title }}</NavLink>
+                                <NavLink :href="'course/details/' + offlineCourse.id + '/' + offlineCourse.slug" class="course-title">{{ offlineCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
@@ -205,7 +206,7 @@
                 <div class="row">
                     <div class="col-md-4" v-for="recordCourse in recordCourses">
                         <div class="course-item-wrap">
-                            <NavLink :href="'course/details/' + recordCourse.id" class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + recordCourse.id + '/' + recordCourse.slug" class="course-item-image-outer">
                                 <img :src="'course/' + recordCourse.image">
                             </NavLink>
                             <div class="course-item-content">
@@ -217,7 +218,7 @@
                                     <del class="origin-price">{{ recordCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ recordCourse.real_price }} ৳</span>
                                 </div>
-                                <NavLink :href="'course/details/' + recordCourse.id" class="course-title">{{ recordCourse.title }}</NavLink>
+                                <NavLink :href="'course/details/' + recordCourse.id + '/' + recordCourse.slug" class="course-title">{{ recordCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
@@ -247,7 +248,7 @@
                 <div class="row">
                     <div class="col-md-4" v-for="freeCourse in freeCourses">
                         <div class="course-item-wrap">
-                            <NavLink :href="'course/details/' + freeCourse.id" class="course-item-image-outer">
+                            <NavLink :href="'course/details/' + freeCourse.id + '/' + freeCourse.slug" class="course-item-image-outer">
                                 <img :src="'course/' + freeCourse.image">
                             </NavLink>
                             <div class="course-item-content">
@@ -259,7 +260,7 @@
                                     <del class="origin-price">{{ freeCourse.discount_price }} ৳</del>
                                     <span class="discount-price">{{ freeCourse.real_price }} ৳</span>
                                 </div>
-                                <NavLink :href="'course/details/' + freeCourse.id" class="course-title">{{ freeCourse.title }}</NavLink>
+                                <NavLink :href="'course/details/' + freeCourse.id + '/' + freeCourse.slug" class="course-title">{{ freeCourse.title }}</NavLink>
                                 <div class="course-meta">
                                     <div class="meta-item course-lesson">
                                         <i class="far fa-file-alt"></i>
