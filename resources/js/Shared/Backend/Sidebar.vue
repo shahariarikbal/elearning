@@ -47,7 +47,7 @@
                     </NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" :href="'slider'">
+                    <NavLink class="nav-link" :href="'frontend-slider'">
                         <span class="menu-title">Slider</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </NavLink>
