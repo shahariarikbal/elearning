@@ -37,6 +37,6 @@ class SliderController extends Controller
         $slider->sub_title = $request->sub_title;
         $slider->save();
         sleep(1);
-        return redirect()->route('slider-show')->with('success', 'Course has been updated');
+        return redirect()->route('slider-show')->with('success', 'Slider has been updated');
     }
 }

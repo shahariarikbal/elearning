@@ -69,4 +69,8 @@ Route::delete('/delete/trainer/{id}', [\App\Http\Controllers\Admin\TrainerContro
 Route::get('/frontend-slider', [\App\Http\Controllers\Admin\SliderController::class, 'slider'])->name('slider-show');
 Route::post('/frontend-slider/update/{id}', [\App\Http\Controllers\Admin\SliderController::class, 'updateSlider'])->name('update.slider');
 
+//Setting....
+Route::get('/settings', [\App\Http\Controllers\Admin\SettingController::class, 'setting'])->name('setting-show');
+Route::post('/setting/update/{id}', [\App\Http\Controllers\Admin\SettingController::class, 'updateSetting'])->name('update.setting');
+
 require __DIR__.'/auth.php';
