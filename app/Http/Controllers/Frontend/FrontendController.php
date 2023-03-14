@@ -7,11 +7,13 @@ use App\Models\Course;
 use App\Models\Service;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
+use App\Models\Slider;
 
 class FrontendController extends Controller
 {
     public function index()
     {
+        $slider = Slider::find(1);
         $services = Service::select(['id', 'title', 'slug', 'image', 'description'])->orderBy('created_at', 'desc')->get();
         $onlineCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
             ->orderBy('created_at', 'desc')
@@ -35,6 +37,7 @@ class FrontendController extends Controller
 
         sleep(1);
         return Inertia::render('Welcome', [
+            'slider' => $slider,
             'services' => $services,
             'onlineCourses' => $onlineCourses,
             'offlineCourses' => $offlineCourses,

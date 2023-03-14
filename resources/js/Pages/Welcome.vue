@@ -10,10 +10,10 @@
                     <div class="col-md-6">
                         <div class="home-sec-left-side-wrap">
                             <h1 class="title">
-                                বেকারত্ব কে না বলুন দক্ষতা অর্জন করে ফ্রিল্যান্সিং এ ক্যারিয়ার গড়ুন!
+                                {{ slider.title }}
                             </h1>
                             <p class="sub-title">
-                                TBS একাডেমি আপনাকে সঠিক কাজের দক্ষতা অর্জন করতে ও সফল ক্যারিয়ার গঠনে সহয়তা করে - সেটা এখন এবং ভবিষ্যতে।
+                                {{ slider.sub_title }}
                             </p>
                             <div class="home-sec-left-link-outer">
                                 <NavLink href="/courses" class="course-link">কোর্সগুলো দেখুন</NavLink>
@@ -23,7 +23,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="home-sec-right-side-wrap">
-                            <img :src="'frontend/images/home-banner.png'">
+                            <img :src="'/slider/' + slider.image">
                         </div>
                     </div>
                 </div>
@@ -291,6 +291,10 @@
     import NavLink from '../Shared/NavLink.vue';
     import {useForm} from "@inertiajs/vue3";
     const props = defineProps({
+        slider: {
+            type: Object,
+            default: () => ({})
+        },
         services: {
             type: Object,
             default: () => ({})
