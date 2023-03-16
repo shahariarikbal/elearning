@@ -29,7 +29,7 @@
             <section class="login-section">
                 <div class="container">
                     <div class="login-form-wrapper">
-                        <form @submit.prevent="submit" method="post" class="login-form form-group">
+                        <form @submit.prevent="submit" class="login-form form-group">
                             <div class="title">Student Login</div>
                             <div class="input-field-wrapper">
                                 <span class="fas fa-user"></span>
@@ -71,7 +71,7 @@ const form = useForm({
 const submit = () => {
     form.post(route('login'), {
         onFinish: () => form.reset('password'),
-    });
+    }, window.location.href = '/');
 };
 </script>
 

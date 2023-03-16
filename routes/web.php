@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/user/login', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userLoginFormShow']);
+Route::post('/user/login', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userLogin'])->name('user.login');
 Route::get('/user/register/{id}/{slug}', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userRegisterFormShow']);
 Route::post('/user/store', [\App\Http\Controllers\Frontend\AuthenticateController::class, 'userStore'])->name('store.user');
 

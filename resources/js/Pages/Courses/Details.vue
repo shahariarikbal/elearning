@@ -86,11 +86,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                <form action="" method="" class="review-form form-group">
-                                    <label for="message">Enter your message here:</label>
-                                    <textarea class="form-control " name="message" rows="5"></textarea>
-                                    <button type="submit" class="btn btn-sm">Submit</button>
-                                </form>
+                                <div v-if="$page.props.auth.user">
+                                    <form action="" method="" class="review-form form-group">
+                                        <label for="message">Enter your message here:</label>
+                                        <textarea class="form-control " name="message" rows="5"></textarea>
+                                        <button type="submit" class="btn btn-sm">Submit</button>
+                                    </form>
+                                </div>
+                                <div v-else>Login first</div>
                             </div>
                         </div>
                         <div class="col-md-4">

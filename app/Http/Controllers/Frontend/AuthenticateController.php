@@ -42,7 +42,7 @@ class AuthenticateController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->phone = $request->phone;
-        $user->password = bcrypt($request->phone);
+        $user->password = bcrypt($request->password);
         $user->avatar = $imageName;
         $user->save();
         //After enroll insert enroll table data
@@ -54,5 +54,25 @@ class AuthenticateController extends Controller
         }
         sleep(1);
         return redirect()->back()->with('message', 'Thank you for course enroll , Your Registration has been successfully done.');
+    }
+
+    public function userLogin(Request $request)
+    {
+        $this->validate($request, [
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        $user = User::where('email', $request->email)->first();
+        if (!$user){
+            return redirect()->back()->withSuccess('Email not match');
+        }else{
+            if (password_verify($request->password, $user->password)){
+                return redirect('/')->withSuccess('You are successfully logged in');
+            }
+            else{
+                return redirect()->back()->with('error', 'Password not match');
+            }
+        }
     }
 }
