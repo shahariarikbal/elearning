@@ -69,9 +69,9 @@ const form = useForm({
 });
 
 const submit = () => {
-    form.post(route('login'), {
+    form.post(route('user.login'), {
         onFinish: () => form.reset('password'),
-    }, window.location.href = '/');
+    });
 };
 </script>
 

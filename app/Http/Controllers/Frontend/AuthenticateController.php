@@ -68,6 +68,7 @@ class AuthenticateController extends Controller
             return redirect()->back()->withSuccess('Email not match');
         }else{
             if (password_verify($request->password, $user->password)){
+                session()->put('userId', $user->id);
                 return redirect('/')->withSuccess('You are successfully logged in');
             }
             else{

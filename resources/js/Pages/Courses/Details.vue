@@ -86,7 +86,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div v-if="$page.props.auth.user">
+                                <div v-if="$page.props.user.userId">
                                     <form action="" method="" class="review-form form-group">
                                         <label for="message">Enter your message here:</label>
                                         <textarea class="form-control " name="message" rows="5"></textarea>

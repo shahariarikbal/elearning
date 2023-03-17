@@ -41,7 +41,10 @@ class HandleInertiaRequests extends Middleware
             },
             'flash' => [
                 'message' => session('message')
-            ]
+            ],
+            'user' => [
+                'userId' => session('userId')
+            ],
         ]);
     }
 }
