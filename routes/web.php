@@ -28,6 +28,7 @@ Route::get('clear', function () {
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class, 'courses']);
 Route::get('/course/details/{id}/{slug}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
+Route::post('/comment/store', [\App\Http\Controllers\Frontend\CommentController::class, 'commentStore'])->name('comment.store');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

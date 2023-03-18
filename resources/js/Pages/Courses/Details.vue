@@ -87,10 +87,11 @@
                                     </div>
                                 </div>
                                 <div v-if="$page.props.user.userId">
-                                    <form action="" method="" class="review-form form-group">
+                                    <form @submit.prevent="submit" method="post" class="review-form form-group">
                                         <label for="message">Enter your message here:</label>
-                                        <textarea class="form-control " name="message" rows="5"></textarea>
-                                        <button type="submit" class="btn btn-sm">Submit</button>
+                                        <textarea class="form-control " name="message" v-model="form.message" rows="5"></textarea>
+                                        <input type="hidden" name="user_id" class="form-control" v-model="form.user_id" />
+                                        <button type="submit" class="btn btn-sm" :disabled="form.processing" :class="{ 'opacity-25': form.processing }">Submit</button>
                                     </form>
                                 </div>
                                 <div v-else>Login first</div>
@@ -146,6 +147,9 @@ import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
 import NavLink from '../../Shared/NavLink.vue';
 import {useForm} from "@inertiajs/vue3";
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/vue3'
+const user = computed(() => usePage().props.user.userId)
 
 const props = defineProps({
     course: {
@@ -154,7 +158,18 @@ const props = defineProps({
     }
 });
 
-const form = useForm({});
+const form = useForm({
+    message: '',
+    user_id: user,
+    course_id: props.course.id
+});
+
+const submit = () => {
+    form.post(route("comment.store"), {
+        onSuccess: () => form.reset(),
+    });
+};
+
 </script>
 
 <style scoped>
