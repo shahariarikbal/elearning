@@ -11,25 +11,21 @@
                 <ul class="nav-list">
                     <li class="nav-item">
                         <NavLink href="/" class="nav-item-link active">
-                            <i class="fas fa-home"></i>
                             হোম
                         </NavLink>
                     </li>
                     <li class="nav-item">
                         <NavLink href="/courses" class="nav-item-link">
-                            <i class="fab fa-discourse"></i>
                             কোর্স সমূহ
                         </NavLink>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-item-link">
-                            <i class="fas fa-video"></i>
                             লাইভ ব্যাচ
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="#" class="nav-item-link">
-                            <i class="fas fa-fire"></i>
                             অফার
                         </a>
                     </li>
