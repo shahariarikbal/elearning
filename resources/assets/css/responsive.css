@@ -1,0 +1,84 @@
+@media screen and ( max-width:1024px ) {
+    .home-sec-left-side-wrap .title {
+        font-size: 35px;
+        line-height: 50px;
+    }
+    
+    .home-sec-left-side-wrap .sub-title {
+        font-size: 16px;
+    }
+}
+
+@media screen and ( max-width: 991px ){
+    .nav-items-wrapper .nav-list {
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        padding-top: 20px;
+        display: block;
+        width: 300px;
+        height: 100vh;
+        background: #ffffff;
+        align-items: flex-start;
+        padding-left: 2%;
+        z-index: 99;
+        overflow: hidden;
+        transition: all .5s ease;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    
+    .nav-list .nav-item {
+        height: auto;
+    }
+    
+    .nav-toggle-btn {
+        display: flex;
+    }
+
+    .home-sec-left-side-wrap .title {
+        font-size: 22px;
+        line-height: 36px;
+    }
+    
+    .home-sec-left-side-wrap .sub-title {
+        font-size: 14px;
+        line-height: 26px;
+        margin-bottom: 5px;
+    }
+    .footer-item-outer {
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and ( max-width: 767px ) {
+    .home-sec-left-side-wrap {
+        margin-bottom: 25px;
+    }
+    
+    .achiement-item-wrap {
+        margin-bottom: 20px;
+    }
+    
+    .subcribe-form .subcriber-btn {
+        padding: 0 10px;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .course-details-outer .title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media screen and ( max-width: 567px ) {
+    .section-title-outer .title {
+        font-size: 25px;
+    }
+    .home-sec-left-link-outer a {
+        padding: 15px 20px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+}

@@ -33,7 +33,7 @@
                         <div class="col-md-8">
                             <div class="course-details-wrapper">
                                 <div class="course-details-video">
-                                    <iframe width="560" height="315" :src="course.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                                    <iframe width="100%" height="315" :src="course.video_url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                                 </div>
                                 <div class="course-details-outer">
                                     <h3 class="title">

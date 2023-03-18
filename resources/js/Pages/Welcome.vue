@@ -40,7 +40,7 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="achiement-item-wrap">
                             <h4 class="count-number">
                                 10000 <span>+</span>
@@ -50,7 +50,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="achiement-item-wrap">
                             <h4 class="count-number">
                                 10
@@ -60,7 +60,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="achiement-item-wrap">
                             <h4 class="count-number">
                                 15
@@ -70,7 +70,7 @@
                             </h6>
                         </div>
                     </div>
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 col-sm-12">
                         <div class="achiement-item-wrap">
                             <h4 class="count-number">
                                 10000 <span>%</span>
@@ -94,13 +94,13 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4" v-for="service in services" :key="service.id">
+                    <div class="col-lg-4 col-md-6 col-sm-12" v-for="service in services" :key="service.id">
                         <div class="about-item-wrap">
                             <img :src="'/service/' + service.image" class="image">
                             <h4 class="title">
                                 {{ service.title }}
                             </h4>
-                            <p class="text" style="text-align: justify">
+                            <p class="text">
                                 {{ service.description }}
                             </p>
                         </div>
@@ -119,20 +119,20 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4" v-for="onlineCourse in onlineCourses">
+                    <div class="col-lg-4 col-md-6 col-sm-12" v-for="onlineCourse in onlineCourses">
 
                         <div class="course-item-wrap">
                             <NavLink :href="'course/details/' + onlineCourse.id + '/' + onlineCourse.slug " class="course-item-image-outer">
                                 <img :src="'course/' + onlineCourse.image" alt="course image" />
                             </NavLink>
                             <div class="course-item-content">
-                                <div class="course-price" v-if="onlineCourse.discount_price != null">
-                                    <del class="origin-price">{{ onlineCourse.real_price }} ৳</del>
+                                <div class="course-price" v-if="onlineCourse.discount_price != null">                                    
                                     <span class="discount-price">{{ onlineCourse.discount_price }} ৳</span>
+                                    <del class="origin-price">{{ onlineCourse.real_price }} ৳</del>
                                 </div>
-                                <div class="course-price" v-else>
-                                    <del class="origin-price">{{ onlineCourse.discount_price }} ৳</del>
+                                <div class="course-price" v-else>                                    
                                     <span class="discount-price">{{ onlineCourse.real_price }} ৳</span>
+                                    <del class="origin-price">{{ onlineCourse.discount_price }} ৳</del>
                                 </div>
                                 <NavLink :href="'course/details/' + onlineCourse.id + '/' + onlineCourse.slug " class="course-title">{{ onlineCourse.title }}</NavLink>
                                 <div class="course-meta">
@@ -162,19 +162,19 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4" v-for="offlineCourse in offlineCourses">
+                    <div class="col-lg-4 col-md-6 col-sm-12" v-for="offlineCourse in offlineCourses">
                         <div class="course-item-wrap">
                             <NavLink :href="'course/details/' + offlineCourse.id + '/' + offlineCourse.slug" class="course-item-image-outer">
                                 <img :src="'course/' + offlineCourse.image">
                             </NavLink>
                             <div class="course-item-content">
-                                <div class="course-price" v-if="offlineCourse.discount_price != null">
-                                    <del class="origin-price">{{ offlineCourse.real_price }} ৳</del>
+                                <div class="course-price" v-if="offlineCourse.discount_price != null">                                    
                                     <span class="discount-price">{{ offlineCourse.discount_price }} ৳</span>
+                                    <del class="origin-price">{{ offlineCourse.real_price }} ৳</del>
                                 </div>
-                                <div class="course-price" v-else>
-                                    <del class="origin-price">{{ offlineCourse.discount_price }} ৳</del>
+                                <div class="course-price" v-else>                                    
                                     <span class="discount-price">{{ offlineCourse.real_price }} ৳</span>
+                                    <del class="origin-price">{{ offlineCourse.discount_price }} ৳</del>
                                 </div>
                                 <NavLink :href="'course/details/' + offlineCourse.id + '/' + offlineCourse.slug" class="course-title">{{ offlineCourse.title }}</NavLink>
                                 <div class="course-meta">
@@ -204,19 +204,19 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4" v-for="recordCourse in recordCourses">
+                    <div class="col-lg-4 col-md-6 col-sm-12" v-for="recordCourse in recordCourses">
                         <div class="course-item-wrap">
                             <NavLink :href="'course/details/' + recordCourse.id + '/' + recordCourse.slug" class="course-item-image-outer">
                                 <img :src="'course/' + recordCourse.image">
                             </NavLink>
                             <div class="course-item-content">
-                                <div class="course-price" v-if="recordCourse.discount_price != null">
-                                    <del class="origin-price">{{ recordCourse.real_price }} ৳</del>
+                                <div class="course-price" v-if="recordCourse.discount_price != null">                                    
                                     <span class="discount-price">{{ recordCourse.discount_price }} ৳</span>
+                                    <del class="origin-price">{{ recordCourse.real_price }} ৳</del>
                                 </div>
-                                <div class="course-price" v-else>
-                                    <del class="origin-price">{{ recordCourse.discount_price }} ৳</del>
+                                <div class="course-price" v-else>                                    
                                     <span class="discount-price">{{ recordCourse.real_price }} ৳</span>
+                                    <del class="origin-price">{{ recordCourse.discount_price }} ৳</del>
                                 </div>
                                 <NavLink :href="'course/details/' + recordCourse.id + '/' + recordCourse.slug" class="course-title">{{ recordCourse.title }}</NavLink>
                                 <div class="course-meta">
@@ -238,7 +238,7 @@
         <!-- /Course -->
 
         <!-- Course -->
-        <section class="course-section">
+        <section class="course-section" style="background: rgb(239, 242, 246);">
             <div class="container">
                 <div class="section-title-outer">
                     <h2 class="title">
@@ -246,19 +246,19 @@
                     </h2>
                 </div>
                 <div class="row">
-                    <div class="col-md-4" v-for="freeCourse in freeCourses">
+                    <div class="col-lg-4 col-md-6 col-sm-12" v-for="freeCourse in freeCourses">
                         <div class="course-item-wrap">
                             <NavLink :href="'course/details/' + freeCourse.id + '/' + freeCourse.slug" class="course-item-image-outer">
                                 <img :src="'course/' + freeCourse.image">
                             </NavLink>
                             <div class="course-item-content">
-                                <div class="course-price" v-if="freeCourse.discount_price != null">
-                                    <del class="origin-price">{{ freeCourse.real_price }} ৳</del>
+                                <div class="course-price" v-if="freeCourse.discount_price != null">                                    
                                     <span class="discount-price">{{ freeCourse.discount_price }} ৳</span>
+                                    <del class="origin-price">{{ freeCourse.real_price }} ৳</del>
                                 </div>
-                                <div class="course-price" v-else>
-                                    <del class="origin-price">{{ freeCourse.discount_price }} ৳</del>
+                                <div class="course-price" v-else>                                    
                                     <span class="discount-price">{{ freeCourse.real_price }} ৳</span>
+                                    <del class="origin-price">{{ freeCourse.discount_price }} ৳</del>
                                 </div>
                                 <NavLink :href="'course/details/' + freeCourse.id + '/' + freeCourse.slug" class="course-title">{{ freeCourse.title }}</NavLink>
                                 <div class="course-meta">

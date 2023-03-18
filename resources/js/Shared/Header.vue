@@ -5,10 +5,10 @@
                 <NavLink href="/" class="navbar-brand">
                     <img class="brand" :src="'/setting/' + $page.props.setting.allSetting.logo" alt="Logo">
                 </NavLink>
-                <div class="nav-toggle-btn">
+                <div class="nav-toggle-btn" onclick="myFunction()">
                     <div class="btn-inner"></div>
                 </div>
-                <ul class="nav-list">
+                <ul class="nav-list" id="navList">
                     <li class="nav-item">
                         <NavLink href="/" class="nav-item-link active">
                             হোম

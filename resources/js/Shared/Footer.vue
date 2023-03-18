@@ -3,7 +3,7 @@
         <footer class="footer-section">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-item-outer">
                             <h4 class="title">
                                 যোগাযোগ করুন
@@ -52,7 +52,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-item-outer">
                             <h4 class="title">
                                 অন্যান্য
@@ -76,7 +76,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-lg-2 col-md-6 col-sm-6">
                         <div class="footer-item-outer">
                             <h4 class="title">
                                 নীতিমালা
@@ -100,7 +100,7 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-lg-5 col-md-6 col-sm-6">
                         <div class="footer-item-outer">
                             <h4 class="title">
                                 অফারের জন্য সাবস্ক্রাইব করুন

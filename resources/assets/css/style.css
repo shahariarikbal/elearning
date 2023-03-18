@@ -49,7 +49,7 @@ body {
 }
 
 .section-title-outer .title .separate-color{
-  color: orange;
+  color: #23bdee;
 }
 
 .banner-section:after {
@@ -80,7 +80,6 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     color: #ffffff;
-    margin-bottom: 0!important;
     text-align: center;
     justify-content: center;
 }
@@ -109,7 +108,7 @@ body {
 }
 
 .banner-section .banner-item li a i {
-    color: #ff5733;
+    color: #3291dc;
     margin-right: 5px;
 }
 
@@ -130,7 +129,7 @@ body {
     content: "\f111";
     font-size: 10px;
     font-weight: 500;
-    color: #ff5733;
+    color: #3291dc;
     font-family: "Font Awesome 5 Free";
     padding-right: 4px;
     position: relative;
@@ -179,7 +178,7 @@ body {
   align-items: center;
 }
 .nav-item:hover .nav-item-link {
-  color: #FF5733;
+  color: #2f8ddf;
 }
 .nav-item-link {
   position: relative;
@@ -209,8 +208,8 @@ body {
 
 .nav-item-link.login-logout {
     padding-right: 15px;
-    background: #0ca7f1;
-    border-radius: 5px;
+    background: #3291dc;
+    border-radius: 30px;
     transition: all .3s ease;
     height: auto;
     color: #fff;
@@ -220,7 +219,7 @@ body {
 }
 
 .nav-item:hover .nav-item-link.login-logout {
-    background: orange;
+    background: #08216b;
     color: #fff;
 }
 
@@ -327,15 +326,15 @@ body {
 
 .home-sec-left-side-wrap .title {
     font-weight: 500;
-    font-size: 56px;
-    line-height: 65px;
+    font-size: 40px;
+    line-height: 60px;
     color: #fff;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .home-sec-left-side-wrap .sub-title {
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     color: #fff;
 }
@@ -343,16 +342,17 @@ body {
 .home-sec-left-link-outer a {
     padding: 20px 44px;
     color: #fff;
-    border-radius: 5px;
+    border-radius: 30px;
     font-weight: 700;
-    margin-top: 30px;
+    margin-top: 15px;
     display: inline-block;
     transition: all .3s ease;
 }
 
 .home-sec-left-link-outer a:hover {
-    background: orange;
-    border-color: orange;
+    background: #76deb1;
+    border-color: #76deb1;
+    color: #fff;
 }
 
 .home-sec-left-link-outer .course-link {
@@ -425,6 +425,7 @@ body {
     overflow: hidden;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     transition: all .3s ease;
+    margin-bottom: 20px;
 }
 
 .course-item-content {
@@ -456,9 +457,9 @@ body {
 }
 
 .course-item-content .course-price .origin-price {
-    font-size: 24px;
+    font-size: 18px;
     font-weight: 600;
-    margin-right: 12px;
+    margin-left: 12px;
     color: #8C89A2;
 }
 
@@ -511,12 +512,17 @@ body {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 20px 0;
     border-radius: 10px;
+    transition: all .3s ease;
+}
+
+.achiement-item-wrap:hover {
+    transform: translateY(-10px);
 }
 
 .achiement-item-wrap .count-number {
     font-weight: 600;
     font-size: 35px;
-    color: orange;
+    color: #3291dc;
     margin-bottom: 10px;
 }
 
@@ -562,7 +568,7 @@ body {
 }
 
 .footer-list-item-link:hover {
-    color: orange;
+    color: #23bdee;
 }
 
 .footer-social-link-item a {
@@ -572,6 +578,10 @@ body {
     border-radius: 100%;
     color: #fff;
     display: block;
+}
+
+.footer-social-link-item a i {
+    color: #fff;
 }
 
 .footer-social-link-item {
@@ -637,7 +647,7 @@ body {
 }
 
 .footer-bottom-outer .copyright-text a {
-    color: #ffa500;
+    color: #23bdee;
 }
 /*Footer section css End*/
 
@@ -915,7 +925,7 @@ body {
 }
 
 .reset-password-link {
-    color: #ff5733;
+    color: #3291dc;
     text-decoration: underline;
     font-size: 18px;
     font-weight: 600;
@@ -929,18 +939,20 @@ body {
 }
 
 .submit-btn-outer .submit-btn-inner {
-    border: 1px solid #f16522;
-    -moz-transform: skewX(-20deg);
-    -webkit-transform: skewX(-20deg);
-    -o-transform: skewX(-20deg);
-    -ms-transform: skewX(-20deg);
-    transform: skewX(-20deg);
-    background: #ff5733;
+    border: 1px solid #3291dc;
+    background: #3291dc;
     font-size: 16px;
     text-transform: uppercase;
     color: #fff;
     font-weight: 600;
-    padding: 10px 20px;
+    padding: 10px 40px;
+    border-radius: 30px;
+    transition: all .3s ease;
+}
+
+.submit-btn-outer:hover .submit-btn-inner {
+    background: transparent;
+    color: #000;
 }
 
 .sign-up-link {
@@ -948,15 +960,15 @@ body {
     text-align: center;
     margin-top: 20px;
     font-size: 16px;
-    font-weight: 500;
-    color: #d90110;
+    font-weight: 700;
+    color: #3291dc;
     text-decoration: underline;
 }
 /*Login page css end*/
 
 /*All course page css start*/
 .all-course-button-title {
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 700;
     display: inline-block;
     text-transform: capitalize;
@@ -976,12 +988,12 @@ div#v-pills-tab .nav-link {
     display: inherit;
     margin-bottom: 10px;
     color: #000;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
 }
 
 div#v-pills-tab .nav-link.active {
-    background: #ff5733;
+    background: #23bdee;
     color: #fff;
 }
 /*All course page css End*/
