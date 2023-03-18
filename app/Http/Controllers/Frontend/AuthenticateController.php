@@ -35,7 +35,7 @@ class AuthenticateController extends Controller
         ]);
 
         $imageName = time() . '.' . $request->avatar->extension();
-        $image = $request->avatar->move('/avatar/',$imageName);
+        $image = $request->avatar->move('avatar/',$imageName);
 
         $user = new User();
         $user->first_name = $request->first_name;
