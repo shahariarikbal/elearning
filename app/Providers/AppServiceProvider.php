@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
+use App\Models\Setting;
+use Inertia\Inertia;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +26,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Schema::defaultStringLength(191);
+
+        // Inertia::share('*', function($view){
+        //     // $view->with('setting',Setting::first());
+        // });
+        Inertia::share([
+            'setting' => function () {
+                return [
+                    'allSetting' => Setting::first(),
+                ];
+            }
+        ]);
     }
 }

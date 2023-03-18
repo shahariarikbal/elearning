@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Layout />
         <main>
             <!-- Banner -->
             <section class="banner-section" :style="{ 'background-image': 'url('+ '/frontend/images/banner.jpg' + ')' }">
@@ -28,15 +29,15 @@
             <section class="login-section">
                 <div class="container">
                     <div class="login-form-wrapper">
-                        <form action="" method="" class="login-form form-group">
+                        <form @submit.prevent="submit" class="login-form form-group">
                             <div class="title">Student Login</div>
                             <div class="input-field-wrapper">
                                 <span class="fas fa-user"></span>
-                                <input type="email" class="form-control " name="email" placeholder="Email">
+                                <input type="email" class="form-control" v-model="form.email" name="email" placeholder="Email">
                             </div>
                             <div class="input-field-wrapper">
                                 <span class="fas fa-lock"></span>
-                                <input type="password" class="form-control " name="password" id="password" placeholder="Password">
+                                <input type="password" class="form-control" v-model="form.password" name="password" id="password" placeholder="Password">
                                 <i id="icon" class="fas fa-eye"></i>
                             </div>
                             <a href="#" class="reset-password-link">Reset Password ?</a>
@@ -52,17 +53,26 @@
             </section>
             <!-- /Login -->
         </main>
+        <Footer />
     </div>
 </template>
 
-<script>
+<script setup>
 import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
 import NavLink from '../../Shared/NavLink.vue';
-export default {
-        layout: Layout,
-        components:{ Footer, NavLink }
-}
+import { Head, Link, useForm } from '@inertiajs/vue3';
+
+const form = useForm({
+    email: '',
+    password: '',
+});
+
+const submit = () => {
+    form.post(route('user.login'), {
+        onFinish: () => form.reset('password'),
+    });
+};
 </script>
 
 <style scoped>

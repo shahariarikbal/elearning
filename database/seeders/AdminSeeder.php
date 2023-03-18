@@ -16,8 +16,10 @@ class AdminSeeder extends Seeder
     public function run()
     {
         $admin = new User();
-        $admin->name = 'Admin';
+        $admin->first_name = 'Super';
+        $admin->last_name = 'Admin';
         $admin->email = 'admin@admin.com';
+        $admin->phone = '01309608232';
         $admin->password = bcrypt(12345678);
         $admin->save();
     }
