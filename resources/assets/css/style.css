@@ -978,10 +978,10 @@ body {
 }
 
 div#v-pills-tab {
-    width: 350px;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
+    margin-bottom: 30px;
 }
 
 div#v-pills-tab .nav-link {
