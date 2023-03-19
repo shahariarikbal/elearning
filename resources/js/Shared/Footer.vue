@@ -114,7 +114,7 @@
                 </div>
                 <div class="footer-bottom-outer">
                     <p class="copyright-text">
-                        © <a href="https://eurekabd-it.com" target="_blank">Eurekabd-it </a> All Right Reserved.
+                        © Pixency-IT All Right Reserved.
                     </p>
                 </div>
             </div>
