@@ -48,15 +48,41 @@ class FrontendController extends Controller
 
     public function courses()
     {
+        $onlineCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+            ->orderBy('created_at', 'desc')
+            ->where('type', 'online')
+            ->get();
+
+        $offlineCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+            ->orderBy('created_at', 'desc')
+            ->where('type', 'offline')
+            ->get();
+
+        $freeCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+            ->orderBy('created_at', 'desc')
+            ->where('type', 'free')
+            ->get();
+
+        $recordCourses = Course::select(['id', 'title', 'slug', 'image', 'short_description', 'real_price', 'discount_price', 'lesson', 'status'])
+            ->orderBy('created_at', 'desc')
+            ->where('type', 'record')
+            ->get();
         sleep(1);
-        return Inertia::render('Courses/CourseList');
+        return Inertia::render('Courses/CourseList', [
+            'onlineCourses' => $onlineCourses,
+            'offlineCourses' => $offlineCourses,
+            'freeCourses' => $freeCourses,
+            'recordCourses' => $recordCourses,
+        ]);
     }
 
     public function courseDetails($id, $slug)
     {
         sleep(1);
-        $course = Course::where('id',$id)->with('trainer')->first();
-        return Inertia::render('Courses/Details', ['course' => $course]);
+        $course = Course::where('id',$id)->with('trainer', 'comments')->first();
+        return Inertia::render('Courses/Details', [
+            'course' => $course,
+        ]);
     }
     
     public function blog()

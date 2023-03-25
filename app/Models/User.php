@@ -29,6 +29,13 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function getFullNameAttribute() // notice that the attribute name is in CamelCase.
+    {
+        return $this->first_name . ' ' . $this->last_name;
+    }
+
+    protected $appends = ['full_name'];
+
     /**
      * The attributes that should be cast.
      *
@@ -37,4 +44,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }

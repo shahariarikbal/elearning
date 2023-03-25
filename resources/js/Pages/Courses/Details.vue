@@ -56,44 +56,31 @@
                                     <h4 class="title">
                                         শিক্ষার্থীদের মতামত
                                     </h4>
-                                    <div class="course-review-item">
+                                    <div class="course-review-item" v-for="comment in course.comments" :key="comment.id">
                                         <img :src="'/frontend/images/user-default.png'" class="user-image">
                                         <div class="course-review-content">
                                             <h5 class="author-name">
-                                                Shakib Hossain <span class="review-date"> - 10 months ago</span>
+                                                {{ comment.user.first_name }} <span class="review-date"></span>
                                             </h5>
                                             <p class="review-message">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.
+                                                {{ comment.message }}
                                             </p>
-                                            <button data-bs-toggle="modal" data-bs-target="#reply-modal-2241" class="badge bg-success text-uppercase">Reply</button>
-                                        </div>
-                                    </div>
-                                    <div class="course-review-item reply">
-                                        <img :src="'/frontend/images/user-default.png'" class="user-image">
-                                        <div class="course-review-reply-content">
-                                            <h5 class="author-name">
-                                                Shakib Hossain <span class="review-date"> - 10 months ago</span>
-                                            </h5>
-                                            <p class="review-message">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                                tempor incididunt.
-                                            </p>
-                                            <button data-bs-toggle="modal" data-bs-target="#comment-modal-2357" class="badge bg-warning text-uppercase">Edit</button>
-                                            <button data-bs-toggle="modal" data-bs-target="#comment-modal-2357" class="badge bg-danger text-uppercase">Delete</button>
                                         </div>
                                     </div>
                                 </div>
                                 <div v-if="$page.props.user.userId">
-                                    <form action="" method="" class="review-form form-group">
+                                    <form @submit.prevent="submit" method="post" class="review-form form-group">
                                         <label for="message">Enter your message here:</label>
-                                        <textarea class="form-control " name="message" rows="5"></textarea>
-                                        <button type="submit" class="btn btn-sm">Submit</button>
+                                        <textarea class="form-control " name="message" v-model="form.message" rows="5"></textarea>
+                                        <input type="hidden" name="user_id" class="form-control" v-model="form.user_id" />
+                                        <button type="submit" class="btn btn-sm" :disabled="form.processing" :class="{ 'opacity-25': form.processing }">Submit</button>
                                     </form>
                                 </div>
-                                <div v-else>Login first</div>
+                                <div class="" v-else>
+                                    <NavLink href="/user/login" class="nav-item-link login-logout">
+                                        লগ ইন / সাইন আপ
+                                    </NavLink>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -146,6 +133,9 @@ import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
 import NavLink from '../../Shared/NavLink.vue';
 import {useForm} from "@inertiajs/vue3";
+import { computed } from 'vue'
+import { usePage } from '@inertiajs/vue3'
+const user = computed(() => usePage().props.user.userId)
 
 const props = defineProps({
     course: {
@@ -154,7 +144,18 @@ const props = defineProps({
     }
 });
 
-const form = useForm({});
+const form = useForm({
+    message: '',
+    user_id: user,
+    course_id: props.course.id
+});
+
+const submit = () => {
+    form.post(route("comment.store"), {
+        onSuccess: () => form.reset(),
+    });
+};
+
 </script>
 
 <style scoped>

@@ -40,13 +40,13 @@
                                 <input type="password" class="form-control" v-model="form.password" name="password" id="password" placeholder="Password">
                                 <i id="icon" class="fas fa-eye"></i>
                             </div>
-                            <a href="#" class="reset-password-link">Reset Password ?</a>
+<!--                            <a href="#" class="reset-password-link">Reset Password ?</a>-->
                             <div class="submit-btn-outer">
                                 <button type="submit" class="submit-btn-inner">
                                     Sign in
                                 </button>
                             </div>
-                            <NavLink href="/user/register" class="sign-up-link">Sign Up</NavLink>
+<!--                            <NavLink href="/user/register" class="sign-up-link">Sign Up</NavLink>-->
                         </form>
                     </div>
                 </div>
