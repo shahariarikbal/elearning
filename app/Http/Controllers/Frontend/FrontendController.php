@@ -58,4 +58,22 @@ class FrontendController extends Controller
         $course = Course::where('id',$id)->with('trainer')->first();
         return Inertia::render('Courses/Details', ['course' => $course]);
     }
+    
+    public function blog()
+    {
+        sleep(1);
+        return Inertia::render('Blog/BlogList');
+    }
+
+    public function blogDetails()
+    {
+        sleep(1);
+        return Inertia::render('Blog/Details');
+    }
+
+    public function team()
+    {
+        sleep(1);
+        return Inertia::render('Team/TeamList');
+    }
 }

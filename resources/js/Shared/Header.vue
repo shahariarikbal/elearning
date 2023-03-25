@@ -20,6 +20,16 @@
                         </NavLink>
                     </li>
                     <li class="nav-item">
+                        <NavLink href="/blog" class="nav-item-link">
+                            ব্লগ
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
+                        <NavLink href="/team" class="nav-item-link">
+                            টীম
+                        </NavLink>
+                    </li>
+                    <li class="nav-item">
                         <a href="#" class="nav-item-link">
                             লাইভ ব্যাচ
                         </a>

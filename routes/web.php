@@ -28,6 +28,9 @@ Route::get('clear', function () {
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class, 'courses']);
 Route::get('/course/details/{id}/{slug}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
+Route::get('/blog', [\App\Http\Controllers\Frontend\FrontendController::class, 'blog']);
+Route::get('/blog/details', [\App\Http\Controllers\Frontend\FrontendController::class, 'blogDetails']);
+Route::get('/team', [\App\Http\Controllers\Frontend\FrontendController::class, 'team']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

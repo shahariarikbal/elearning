@@ -380,6 +380,7 @@ body {
     margin-bottom: 20px;
     box-shadow: rgb(233 231 231 / 48%) 0px 3px 8px;
     transition: all .3s ease;
+    height: 250px;
 }
 
 .about-item-wrap:hover {
@@ -464,7 +465,7 @@ body {
 }
 
 .course-item-content .course-price .discount-price {
-    color: #20AD96;
+    color: #23bdee;
     font-size: 24px;
     font-weight: 600;
 }
@@ -478,7 +479,7 @@ body {
 }
 
 .course-item-wrap:hover .course-title {
-    color: #20AD96;
+    color: #23bdee;
 }
 
 .course-item-wrap:hover .course-item-image-outer img {
@@ -997,3 +998,197 @@ div#v-pills-tab .nav-link.active {
     color: #fff;
 }
 /*All course page css End*/
+
+/*Blog section css start*/
+.blog-section {
+    padding: 50px 0;
+}
+
+.blog-item-outer {
+    border-radius: 10px;
+    padding: 20px 15px;
+    text-align: center;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+    margin-bottom: 30px;
+    display: block;
+    background: #fff;
+}
+
+.blog-item-image {
+    height: 200px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.blog-item-name {
+    color: #000;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.blog-item-text {
+    color: #5b5b5b;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+.blog-item-outer:hover {
+    transform: translateY(-10px);
+}
+/*Blog section css End*/
+
+/*Blog details css start*/
+.blog-details-section {
+    padding: 70px 0;
+}
+
+.blog-details-image img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.blog-details-image {
+    margin-bottom: 15px;
+}
+
+.blog-details-contant .text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #111;
+}
+
+.recent-blog-wrapper {
+    padding: 35px;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.recent-blog-image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+}
+
+.recent-blog-outer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.recent-blog-title {
+    font-size: 14px;
+    color: #000;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.recent-blog-image-inner {
+    margin-right: 10px;
+}
+
+.recent-blog-content-title {
+    margin-bottom: 0;
+    line-height: 22px;
+}
+/*Blog details css End*/
+
+/*Team section css Start*/
+.team-section {
+    padding: 50px 0;
+}
+
+.list-item-wrapper {
+    margin-bottom: 25px;
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+}
+
+.item-image-outer {
+    overflow: hidden;
+    position: relative;
+}
+
+.item-image-outer img {transition: all .5s ease;}
+
+.list-social-icon-outer {
+    border-top: 2px solid #2D3239;
+    padding: 30px 40px 60px;
+    -moz-transform: skewY(10deg);
+    -webkit-transform: skewY(10deg);
+    -o-transform: skewY(10deg);
+    -ms-transform: skewY(10deg);
+    transform: skewY(10deg);
+    background-color: rgb(50 145 220 / 63%);
+    bottom: -85px;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: 30px 15px 40px;
+    opacity: 0;
+    z-index: 2;
+    transition: all .5s ease;
+}
+
+.list-social-icon-outer .social-icon-list {
+    -moz-transform: skewY(-10deg);
+    -webkit-transform: skewY(-10deg);
+    -o-transform: skewY(-10deg);
+    -ms-transform: skewY(-10deg);
+    transform: skewY(-10deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.list-social-icon-outer .social-icon-list-item {
+    margin-right: 5px;
+}
+
+.social-icon-list-item .social-icon-list-item-link {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+    line-height: 2px;
+    font-size: 15px;
+    height: 35px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 35px;
+    color: #fff;
+}
+
+.item-content-outer {
+    background: #3291dc;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.item-content-outer .list-item-name {
+    font-size: 20px;
+    margin-bottom: 5px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 0;
+}
+
+.item-content-outer .list-item-position {
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.list-item-wrapper:hover .list-social-icon-outer {
+    opacity: 1;
+    bottom: -30px;
+}
+
+.list-item-wrapper:hover .item-image-outer img {
+    transform: scale(1.05);
+}
+/*Team section css End*/
