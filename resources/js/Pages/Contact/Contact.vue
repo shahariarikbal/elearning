@@ -28,7 +28,7 @@
             <section class="contact-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="contact-info-item">
                                 <div class="contact-info-icon">
                                     <i class="fas fa-phone-alt"></i>
@@ -39,7 +39,7 @@
                                 <a href="tel:+65-98112405">+65-98112405</a>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="contact-info-item">
                                 <div class="contact-info-icon">
                                     <i class="fas fa-envelope"></i>
@@ -50,7 +50,7 @@
                                 <a href="mailto:info@gmail.com">info@gmail.com</a>
                             </div>
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-lg-4 col-md-6 col-sm-12">
                             <div class="contact-info-item">
                                 <div class="contact-info-icon">
                                     <i class="fas fa-map-marker-alt"></i>
@@ -59,7 +59,7 @@
                                     Address
                                 </h5>
                                 <p>
-                                    30 Roberts Lane, #02-01 Singapore 218309, Singapore
+                                    30 Roberts Lane, #02-01 Singapore cdgdf fdgdsr 218309, Singapore
                                 </p>
                             </div>
                         </div>
