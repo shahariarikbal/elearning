@@ -76,8 +76,8 @@ body {
 
 .banner-section .banner-title {
     display: flex;
-    font-size: 50px;
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: 500;
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
@@ -534,6 +534,16 @@ body {
 .footer-section {
     padding: 50px 0;
     background: #252641;
+}
+
+.navbar-brand-footer {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.navbar-brand-footer .brand {
+    width: 100%;
+    max-width: 200px;
 }
 
 .footer-item-outer .title {
@@ -1036,6 +1046,7 @@ div#v-pills-tab .nav-link.active {
 
 .blog-item-outer:hover {
     transform: translateY(-10px);
+    box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
 }
 /*Blog section css End*/
 
@@ -1192,3 +1203,145 @@ div#v-pills-tab .nav-link.active {
     transform: scale(1.05);
 }
 /*Team section css End*/
+
+/*Contact section css start*/
+.contact-section {
+    padding: 50px 0;
+}
+
+.contact-info-item {
+    text-align: center;
+    position: relative;
+    z-index: 0;
+    padding: 30px 0;
+    transition: all .3s ease;
+    margin-bottom: 20px;
+}
+
+.contact-info-item:hover {
+    transform: translateY(-10px);
+}
+
+.contact-info-item:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    left: 0;
+    top: 0;
+    opacity: 0.4;
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: rgb(0 0 0 / 38%) 0px 3px 8px;
+}
+
+.contact-info-icon {
+    display: inline-block;
+    padding: 20px 30px;
+    background: #3291dc;
+    margin-bottom: 20px;
+}
+
+.contact-info-icon i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.contact-info-item .title {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 500;
+}
+
+.contact-info-item a {
+    color: #222;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.contact-info-item a:hover,.contact-info-item p:hover {
+    color: #3291dc;
+}
+
+.contact-info-item p {
+    color: #222;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.contact-form-wrapper {
+    margin-top: 30px;
+}
+
+.contact-form {
+    box-shadow: rgb(0 0 0 / 38%) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+.contact-form input {
+    margin-bottom: 20px;
+    height: 50px;
+}
+
+.contact-form input:focus {
+    box-shadow: none;
+    border-color: #ddd;
+}
+
+.contact-submit-btn-outer {
+    margin-top: 20px;
+}
+
+.contact-submit-btn-inner {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: #3291dc;
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+.custom-title:hover{
+    color: black;
+}
+/*Contact section css End*/
+
+/* Terms and condition css start */
+.terms-condition-section {
+    padding: 40px 0;
+}
+.terms-condition-content-wrapper {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.terms-condition-content-wrapper .content-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    position: relative;
+}
+.terms-condition-content-wrapper .content-title i {
+    font-size: 16px;
+    margin-right: 5px;
+    color: #d90110;
+}
+.terms-condition-content-wrapper .content-text {
+    font-size: 16px;
+    color: #000;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+/* Terms and condition css end */

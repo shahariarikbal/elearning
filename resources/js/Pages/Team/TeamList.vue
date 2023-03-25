@@ -54,6 +54,7 @@
             </section>
             <!-- /Team -->
         </main>
+        <Footer />
     </div>
 </template>
 

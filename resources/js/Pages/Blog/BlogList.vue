@@ -43,6 +43,7 @@
             </section>
             <!-- /Blog -->
         </main>
+        <Footer />
     </div>
 </template>
 

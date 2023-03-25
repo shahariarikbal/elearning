@@ -74,6 +74,7 @@
             </section>
             <!-- /Blog Details -->
         </main>
+        <Footer />
     </div>
 </template>
 

@@ -32,6 +32,10 @@ Route::get('/course/details/{id}/{slug}', [\App\Http\Controllers\Frontend\Fronte
 Route::get('/blog', [\App\Http\Controllers\Frontend\FrontendController::class, 'blog']);
 Route::get('/blog/details', [\App\Http\Controllers\Frontend\FrontendController::class, 'blogDetails']);
 Route::get('/team', [\App\Http\Controllers\Frontend\FrontendController::class, 'team']);
+Route::get('/contact', [\App\Http\Controllers\Frontend\FrontendController::class, 'contact']);
+Route::get('/about-us', [\App\Http\Controllers\Frontend\FrontendController::class, 'aboutUs']);
+Route::get('/terms/conditions', [\App\Http\Controllers\Frontend\FrontendController::class, 'termsConditions']);
+Route::get('/privacy/policy', [\App\Http\Controllers\Frontend\FrontendController::class, 'privacyPolicy']);
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

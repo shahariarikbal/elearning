@@ -102,4 +102,28 @@ class FrontendController extends Controller
         sleep(1);
         return Inertia::render('Team/TeamList');
     }
+
+    public function contact()
+    {
+        sleep(1);
+        return Inertia::render('Contact/Contact');
+    }
+
+    public function aboutUs()
+    {
+        sleep(1);
+        return Inertia::render('setting/AboutUs');
+    }
+
+    public function termsConditions()
+    {
+        sleep(1);
+        return Inertia::render('setting/TermsConditions');
+    }
+
+    public function privacyPolicy()
+    {
+        sleep(1);
+        return Inertia::render('setting/PrivacyPolicy');
+    }
 }

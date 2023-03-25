@@ -5,10 +5,16 @@
                 <div class="row">
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-item-outer">
-                            <h4 class="title">
-                                যোগাযোগ করুন
-                            </h4>
+                            <NavLink href="/" class="navbar-brand-footer">
+                                <img class="brand" :src="'/setting/' + $page.props.setting.allSetting.logo" alt="Logo">
+                            </NavLink>
                             <ul class="footer-list">
+                                <li class="footer-list-item">
+                                    <a class="footer-list-item-link" :href="'tel:'+$page.props.setting.allSetting.phone">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                        1189-93 Soi 71 Sukhumvit Klong Ton Khlong Toei dsfgdfhgf  hyfrht
+                                    </a>
+                                </li>
                                 <li class="footer-list-item">
                                     <a class="footer-list-item-link" :href="'tel:'+$page.props.setting.allSetting.phone">
                                         <i class="fas fa-phone-alt"></i>
@@ -59,20 +65,20 @@
                             </h4>
                             <ul class="footer-list">
                                 <li class="footer-list-item">
-                                    <a class="footer-list-item-link" href="#">
+                                    <a class="footer-list-item-link" href="/about-us">
                                         আমাদের সম্পর্কে
                                     </a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a class="footer-list-item-link" href="#">
+                                    <a href="/contact" class="footer-list-item-link">
                                         যোগাযোগ করুন
                                     </a>
                                 </li>
-                                <li class="footer-list-item">
+                                <!-- <li class="footer-list-item">
                                     <a class="footer-list-item-link" href="#">
                                         প্রশ্নাবলী
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
@@ -83,20 +89,20 @@
                             </h4>
                             <ul class="footer-list">
                                 <li class="footer-list-item">
-                                    <a class="footer-list-item-link" href="#">
+                                    <a class="footer-list-item-link" href="/privacy/policy">
                                         Privacy Policy
                                     </a>
                                 </li>
                                 <li class="footer-list-item">
-                                    <a class="footer-list-item-link" href="#">
+                                    <a class="footer-list-item-link" href="/terms/conditions">
                                         Terms & Condition
                                     </a>
                                 </li>
-                                <li class="footer-list-item">
+                                <!-- <li class="footer-list-item">
                                     <a class="footer-list-item-link" href="#">
                                         Certificate Verification
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </div>
