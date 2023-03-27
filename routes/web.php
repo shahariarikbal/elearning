@@ -31,8 +31,9 @@ Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class
 Route::get('/course/details/{id}/{slug}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
 Route::get('/blog', [\App\Http\Controllers\Frontend\FrontendController::class, 'blog']);
 Route::get('/blog/details', [\App\Http\Controllers\Frontend\FrontendController::class, 'blogDetails']);
-Route::get('/team', [\App\Http\Controllers\Frontend\FrontendController::class, 'team']);
+Route::get('/team/members', [\App\Http\Controllers\Frontend\FrontendController::class, 'teamMembers']);
 Route::get('/contact', [\App\Http\Controllers\Frontend\FrontendController::class, 'contact']);
+Route::post('/contact/store', [\App\Http\Controllers\Frontend\FrontendController::class, 'contactStore'])->name('contact.store');
 Route::get('/about-us', [\App\Http\Controllers\Frontend\FrontendController::class, 'aboutUs']);
 Route::get('/terms/conditions', [\App\Http\Controllers\Frontend\FrontendController::class, 'termsConditions']);
 Route::get('/privacy/policy', [\App\Http\Controllers\Frontend\FrontendController::class, 'privacyPolicy']);
@@ -69,6 +70,22 @@ Route::post('/store/course', [\App\Http\Controllers\Admin\CourseController::clas
 Route::get('/course/edit/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'editCourse'])->name('edit.courses');
 Route::post('/course/update/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'updateCourse'])->name('update.course');
 Route::delete('/delete/course/{id}', [\App\Http\Controllers\Admin\CourseController::class, 'deleteCourse'])->name('delete.courses');
+
+//Blog....
+Route::get('/blog/list', [\App\Http\Controllers\Admin\BlogController::class, 'blogList'])->name('blog-list');
+Route::get('/blog/add', [\App\Http\Controllers\Admin\BlogController::class, 'blogAdd'])->name('add-blog');
+Route::post('/blog/store', [\App\Http\Controllers\Admin\BlogController::class, 'blogStore'])->name('blog.store');
+Route::get('/blog/edit/{id}', [\App\Http\Controllers\Admin\BlogController::class, 'blogEdit'])->name('edit.blog');
+Route::post('/blog/update/{id}', [\App\Http\Controllers\Admin\BlogController::class, 'blogUpdate'])->name('update.blog');
+Route::delete('/blog/delete/{id}', [\App\Http\Controllers\Admin\BlogController::class, 'blogDelete'])->name('delete.blog');
+
+//Team....
+Route::get('/team/list', [\App\Http\Controllers\Admin\TeamController::class, 'teamList'])->name('team-list');
+Route::get('/team/add', [\App\Http\Controllers\Admin\TeamController::class, 'teamAdd'])->name('add-team');
+Route::post('/team/store', [\App\Http\Controllers\Admin\TeamController::class, 'teamStore'])->name('team.store');
+Route::get('/team/edit/{id}', [\App\Http\Controllers\Admin\TeamController::class, 'teamEdit'])->name('edit.team');
+Route::post('/team/update/{id}', [\App\Http\Controllers\Admin\TeamController::class, 'teamUpdate'])->name('update.team');
+Route::delete('/team/delete/{id}', [\App\Http\Controllers\Admin\TeamController::class, 'teamDelete'])->name('delete.team');
 
 //Trainers....
 Route::get('/trainer/list', [\App\Http\Controllers\Admin\TrainerController::class, 'trainer'])->name('trainer-list');

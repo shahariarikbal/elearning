@@ -53,7 +53,19 @@
                     </NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" :href="'settings'">
+                    <NavLink class="nav-link" :href="'blog/add'">
+                        <span class="menu-title">Blog</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" :href="'/team/add'">
+                        <span class="menu-title">Team</span>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </NavLink>
+                </li>
+                <li class="nav-item">
+                    <NavLink class="nav-link" :href="'/settings'">
                         <span class="menu-title">Settings</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </NavLink>

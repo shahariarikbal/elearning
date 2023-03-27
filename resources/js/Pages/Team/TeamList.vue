@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Layout/>
         <main>
             <!-- Banner -->
             <section class="banner-section" :style="{ 'background-image': 'url('+ '/frontend/images/banner.jpg' + ')' }">
@@ -28,24 +29,24 @@
             <section class="team-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="col-lg-3 col-md-6 col-sm-6" v-for="member in teams">
                             <div class="list-item-wrapper">
                                 <div class="item-image-outer">
-                                    <img src="upload/image/monir sir.jpg" />
+                                    <img :src="'/team/' + member.avatar" />
                                     <div class="list-social-icon-outer">
                                         <ul class="social-icon-list">
                                             <li class="social-icon-list-item">
-                                                <a href="https://www.facebook.com/expromonir" class="social-icon-list-item-link"> <i class="fab fa-facebook-f"></i> </a>
+                                                <a href="#" class="social-icon-list-item-link"> <i class="fab fa-facebook-f"></i> </a>
                                             </li>
                                             <li class="social-icon-list-item">
-                                                <a href="https://www.linkedin.com/in/monirahammadit" class="social-icon-list-item-link"> <i class="fab fa-linkedin-in"></i> </a>
+                                                <a href="#" class="social-icon-list-item-link"> <i class="fab fa-linkedin-in"></i> </a>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                                 <div class="item-content-outer">
-                                    <h4 class="list-item-name">Monir Ahammad</h4>
-                                    <span class="list-item-position"> CEO & Founder </span>
+                                    <h4 class="list-item-name">{{ member.name }}</h4>
+                                    <span class="list-item-position"> {{ member.designation }} </span>
                                 </div>
                             </div>
                         </div>
@@ -58,14 +59,16 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
 import NavLink from '../../Shared/NavLink.vue';
-export default {
-    layout: Layout,
-    components:{ Footer, NavLink }
-}
+const props = defineProps({
+    teams: {
+        type: Object,
+        default: () => ({})
+    }
+});
 </script>
 
 <style scoped>

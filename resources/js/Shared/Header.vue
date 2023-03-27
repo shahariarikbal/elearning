@@ -25,7 +25,7 @@
                         </NavLink>
                     </li>
                     <li class="nav-item">
-                        <NavLink href="/team" class="nav-item-link">
+                        <NavLink href="/team/members" class="nav-item-link">
                             টীম
                         </NavLink>
                     </li>

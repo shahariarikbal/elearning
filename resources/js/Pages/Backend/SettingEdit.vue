@@ -44,6 +44,14 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="email">Address</label>
+                                            <textarea class="form-control" name="address" v-model="form.address" rows="8" placeholder="Enter Address"></textarea>
+
+                                            <div v-if="form.errors.address" class="text-sm text-red-600">
+                                                {{ form.errors.address }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="youtube">YouTube Channel Link</label>
                                             <input type="text" name="youtube" v-model="form.youtube" class="form-control"
                                                 placeholder="Enter youtube channel link" />
@@ -112,6 +120,7 @@ const form = useForm({
     logo: props.setting.logo,
     phone: props.setting.phone,
     email: props.setting.email,
+    address: props.setting.address,
     youtube: props.setting.youtube,
     facebook: props.setting.facebook,
     twitter: props.setting.twitter,

@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Contact;
 use App\Models\Course;
 use App\Models\Service;
+use App\Models\Setting;
+use App\Models\Team;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Slider;
@@ -84,7 +87,7 @@ class FrontendController extends Controller
             'course' => $course,
         ]);
     }
-    
+
     public function blog()
     {
         sleep(1);
@@ -97,16 +100,36 @@ class FrontendController extends Controller
         return Inertia::render('Blog/Details');
     }
 
-    public function team()
+    public function teamMembers()
     {
+        $teams = Team::get();
         sleep(1);
-        return Inertia::render('Team/TeamList');
+        return Inertia::render('Team/TeamList', ['teams' => $teams]);
     }
 
     public function contact()
     {
+        $contact = Setting::first();
         sleep(1);
-        return Inertia::render('Contact/Contact');
+        return Inertia::render('Contact/Contact', ['contact' => $contact]);
+    }
+
+    public function contactStore(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'message' => 'required',
+        ]);
+
+        $contact = new Contact();
+        $contact->name = $request->name;
+        $contact->phone = $request->phone;
+        $contact->email = $request->email;
+        $contact->message = $request->message;
+        $contact->save();
+        return redirect('/')->with('success', 'Contact has been submitted');
     }
 
     public function aboutUs()
