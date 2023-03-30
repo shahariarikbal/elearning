@@ -27,6 +27,9 @@
         transition: all .5s ease;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
+    .menu-visible .nav-list {
+        right: 0;
+    }
     
     .nav-list .nav-item {
         height: auto;
