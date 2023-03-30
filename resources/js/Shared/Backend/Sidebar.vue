@@ -47,13 +47,13 @@
                     </NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" :href="'frontend-slider'">
+                    <NavLink class="nav-link" :href="'/frontend-slider'">
                         <span class="menu-title">Slider</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </NavLink>
                 </li>
                 <li class="nav-item">
-                    <NavLink class="nav-link" :href="'blog/add'">
+                    <NavLink class="nav-link" :href="'/blog/add'">
                         <span class="menu-title">Blog</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
                     </NavLink>

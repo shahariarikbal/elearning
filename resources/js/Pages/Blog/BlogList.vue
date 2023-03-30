@@ -1,5 +1,6 @@
 <template>
     <div>
+        <layout/>
         <main>
             <!-- Banner -->
             <section class="banner-section" :style="{ 'background-image': 'url('+ '/frontend/images/banner.jpg' + ')' }">
@@ -28,13 +29,12 @@
             <section class="blog-section">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <NavLink href="/blog/details" class="blog-item-outer">
-                                <img src="https://mdjamalmia.com/blog/blog_63fc9b6ee08f98.312787221677499246.jpeg" class="blog-item-image">
-                                <h5 class="blog-item-name">Digital Marketing</h5>
+                        <div class="col-lg-4 col-md-6 col-sm-12" v-for="blogList in blogs" :key="blogList.id">
+                            <NavLink :href="'/blog/details/' + blogList.id + '/' + blogList.slug" class="blog-item-outer">
+                                <img :src="'/blog/' + blogList.image" class="blog-item-image" alt="blog image">
+                                <h5 class="blog-item-name">{{ blogList.title }}</h5>
                                 <p class="blog-item-text">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                                    {{ blogList.short_description }}
                                 </p>
                             </NavLink>
                         </div>
@@ -47,14 +47,16 @@
     </div>
 </template>
 
-<script>
+<script setup>
 import Layout from '../../Shared/Layout.vue';
 import Footer from '../../Shared/Footer.vue';
 import NavLink from '../../Shared/NavLink.vue';
-export default {
-    layout: Layout,
-    components:{ Footer, NavLink }
-}
+const props = defineProps({
+    blogs: {
+        type: Object,
+        default: () => ({})
+    }
+});
 </script>
 
 <style scoped>

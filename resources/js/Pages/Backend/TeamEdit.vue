@@ -37,6 +37,28 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
+                                            <label for="fb_link">Facebook Link</label>
+                                            <input type="url" name="fb_link" v-model="form.fb_link" class="form-control" placeholder="Enter facebook link" />
+
+                                            <div
+                                                v-if="form.errors.fb_link"
+                                                class="text-sm text-red-600"
+                                            >
+                                                {{ form.errors.fb_link }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="in_link">Linkedin Link</label>
+                                            <input type="url" name="in_link" v-model="form.in_link" class="form-control" placeholder="Enter linkedin link" />
+
+                                            <div
+                                                v-if="form.errors.in_link"
+                                                class="text-sm text-red-600"
+                                            >
+                                                {{ form.errors.in_link }}
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
                                             <label for="image">Image</label>
                                             <input type="file" name="avatar" class="form-control"
                                               @input="form.avatar = $event.target.files[0]"
@@ -82,6 +104,8 @@ const form = useForm({
     id: props.team.id,
     name: props.team.name,
     designation: props.team.designation,
+    fb_link: props.team.fb_link,
+    in_link: props.team.in_link,
     avatar: props.team.avatar,
 });
 

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
 use App\Models\Contact;
 use App\Models\Course;
 use App\Models\Service;
@@ -90,14 +91,17 @@ class FrontendController extends Controller
 
     public function blog()
     {
+        $blogs = Blog::orderBy('created_at', 'desc')->get();
         sleep(1);
-        return Inertia::render('Blog/BlogList');
+        return Inertia::render('Blog/BlogList', ['blogs' => $blogs]);
     }
 
-    public function blogDetails()
+    public function blogDetails($id, $slug)
     {
+        $blog = Blog::find($id);
+        $blogs = Blog::orderBy('created_at', 'desc')->get();
         sleep(1);
-        return Inertia::render('Blog/Details');
+        return Inertia::render('Blog/Details', ['blog' => $blog, 'blogs' => $blogs]);
     }
 
     public function teamMembers()

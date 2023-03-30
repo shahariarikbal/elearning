@@ -34,6 +34,8 @@ class TeamController extends Controller
             'name' => 'required',
             'avatar' => 'required',
             'designation' => 'required',
+            'fb_link' => 'required',
+            'in_link' => 'required',
         ]);
         $imageName = time() . '.' . $request->avatar->extension();
         $imagePath = $request->avatar->move('team/', $imageName);
@@ -41,6 +43,8 @@ class TeamController extends Controller
             'name' => $request->name,
             'avatar' => $imageName,
             'designation' => $request->designation,
+            'fb_link' => $request->fb_link,
+            'in_link' => $request->in_link,
         ]);
         sleep(1);
         return redirect()->route('team-list')->with('success', 'Team has been created');
@@ -48,6 +52,13 @@ class TeamController extends Controller
 
     public function teamUpdate(Request $request, $id)
     {
+        $this->validate($request, [
+            'name' => 'required',
+            'designation' => 'required',
+            'fb_link' => 'required',
+            'in_link' => 'required',
+        ]);
+
         $team = Team::find($id);
         if($request->hasFile('avatar')){
             if(file_exists(public_path('team/'.$team->avatar))){
@@ -65,6 +76,8 @@ class TeamController extends Controller
         }
         $team->name = $request->name;
         $team->designation = $request->designation;
+        $team->fb_link = $request->fb_link;
+        $team->in_link = $request->in_link;
         $team->save();
         sleep(1);
         return redirect()->route('team-list')->with('success', 'Team has been updated');

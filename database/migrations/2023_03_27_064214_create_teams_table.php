@@ -17,6 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('designation');
+            $table->string('fb_link');
+            $table->string('in_link');
             $table->string('avatar');
             $table->timestamps();
         });

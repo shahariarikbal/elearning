@@ -29,8 +29,8 @@ Route::get('clear', function () {
 Route::get('/', [\App\Http\Controllers\Frontend\FrontendController::class, 'index']);
 Route::get('/courses', [\App\Http\Controllers\Frontend\FrontendController::class, 'courses']);
 Route::get('/course/details/{id}/{slug}', [\App\Http\Controllers\Frontend\FrontendController::class, 'courseDetails']);
-Route::get('/blog', [\App\Http\Controllers\Frontend\FrontendController::class, 'blog']);
-Route::get('/blog/details', [\App\Http\Controllers\Frontend\FrontendController::class, 'blogDetails']);
+Route::get('/blogs', [\App\Http\Controllers\Frontend\FrontendController::class, 'blog']);
+Route::get('/blog/details/{id}/{slug}', [\App\Http\Controllers\Frontend\FrontendController::class, 'blogDetails']);
 Route::get('/team/members', [\App\Http\Controllers\Frontend\FrontendController::class, 'teamMembers']);
 Route::get('/contact', [\App\Http\Controllers\Frontend\FrontendController::class, 'contact']);
 Route::post('/contact/store', [\App\Http\Controllers\Frontend\FrontendController::class, 'contactStore'])->name('contact.store');

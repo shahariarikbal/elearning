@@ -36,10 +36,10 @@
                                     <div class="list-social-icon-outer">
                                         <ul class="social-icon-list">
                                             <li class="social-icon-list-item">
-                                                <a href="#" class="social-icon-list-item-link"> <i class="fab fa-facebook-f"></i> </a>
+                                                <a :href="member.fb_link" target="_blank" class="social-icon-list-item-link"> <i class="fab fa-facebook-f"></i> </a>
                                             </li>
                                             <li class="social-icon-list-item">
-                                                <a href="#" class="social-icon-list-item-link"> <i class="fab fa-linkedin-in"></i> </a>
+                                                <a :href="member.in_link" target="_blank" class="social-icon-list-item-link"> <i class="fab fa-linkedin-in"></i> </a>
                                             </li>
                                         </ul>
                                     </div>

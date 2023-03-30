@@ -20,7 +20,7 @@
                         </NavLink>
                     </li>
                     <li class="nav-item">
-                        <NavLink href="/blog" class="nav-item-link">
+                        <NavLink href="/blogs" class="nav-item-link">
                             ব্লগ
                         </NavLink>
                     </li>
