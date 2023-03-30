@@ -6,7 +6,7 @@
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="footer-item-outer">
                             <NavLink href="/" class="navbar-brand-footer">
-                                <img class="brand" :src="'/setting/' + $page.props.setting.allSetting.logo" alt="Logo">
+                                <img class="brand" :src="'/frontend/images/footer-logo.png'" alt="Logo">
                             </NavLink>
                             <ul class="footer-list">
                                 <li class="footer-list-item">

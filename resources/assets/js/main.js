@@ -9,7 +9,6 @@ $(window).scroll(function() {
 });
 
 // Navbar Toggle Button For Mini Device
-$('.nav-toggle-btn').click(function() {
-  $('.nav-items-wrapper').toggleClass('menu-visible');
-  $('body').toggleClass('body-overflow');
-});
+// $('.nav-toggle-btn').click(function() {
+//   $('.nav-list').toggleClass('menu-visible');
+// });

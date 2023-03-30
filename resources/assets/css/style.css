@@ -156,7 +156,6 @@ body {
     height: 100%;
 }
 .nav-items-wrapper {
-    padding: 0% 5%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -298,7 +297,7 @@ body {
 }
 
     /*fixed header*/
-.fixed-header .nav-items-wrapper {
+.fixed-header .header-section {
     position: fixed;
     background: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
